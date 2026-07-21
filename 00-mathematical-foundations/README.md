@@ -30,7 +30,7 @@ Each of those is a real failure mode, and none of them is diagnosable from the l
 | # | Chapter | Core question | Status |
 |---|---|---|:--:|
 | 00.01 | [Linear Algebra](01-linear-algebra/) | How do we represent and transform data? | 🟢 |
-| 00.02 | [Calculus & Optimization](02-calculus-and-optimization/) | How do we find the best parameters? | ⚪ |
+| 00.02 | [Calculus & Optimization](02-calculus-and-optimization/) | How do we find the best parameters? | 🟢 |
 | 00.03 | [Probability](03-probability/) | How do we reason under uncertainty? | ⚪ |
 | 00.04 | [Statistics & Inference](04-statistics-and-inference/) | How do we learn from a finite sample? | ⚪ |
 | 00.05 | [Information Theory](05-information-theory/) | How do we measure information and surprise? | ⚪ |
@@ -42,35 +42,26 @@ Each of those is a real failure mode, and none of them is diagnosable from the l
 
 Machine learning is these six subjects, wired together:
 
-```
-                      ┌──────────────────────┐
-                      │   A LEARNING PROBLEM │
-                      └──────────┬───────────┘
-                                 │
-       ┌─────────────────────────┼─────────────────────────┐
-       │                         │                         │
-       ▼                         ▼                         ▼
-┌──────────────┐        ┌────────────────┐        ┌────────────────┐
-│ REPRESENT    │        │ MEASURE        │        │ SEARCH         │
-│ the data     │        │ how wrong      │        │ for better     │
-│              │        │ we are         │        │ parameters     │
-│ Linear       │        │ Probability +  │        │ Calculus +     │
-│ algebra      │        │ Information    │        │ Optimization   │
-│ (00.01)      │        │ theory         │        │ (00.02)        │
-│              │        │ (00.03, 00.05) │        │                │
-└──────┬───────┘        └────────┬───────┘        └────────┬───────┘
-       │                         │                         │
-       └─────────────────────────┼─────────────────────────┘
-                                 ▼
-                    ┌────────────────────────┐
-                    │ GENERALIZE beyond      │
-                    │ the sample  (00.04)    │
-                    └────────────┬───────────┘
-                                 ▼
-                    ┌────────────────────────┐
-                    │ ...and survive contact │
-                    │ with float64  (00.06)  │
-                    └────────────────────────┘
+```mermaid
+flowchart TD
+    P(["A learning problem"])
+
+    P --> R["<b>REPRESENT</b> the data<br/><i>Linear algebra</i><br/>00.01"]
+    P --> M["<b>MEASURE</b> how wrong we are<br/><i>Probability · Information theory</i><br/>00.03 · 00.05"]
+    P --> S["<b>SEARCH</b> for better parameters<br/><i>Calculus · Optimization</i><br/>00.02"]
+
+    R --> G["<b>GENERALIZE</b> beyond the sample<br/><i>Statistics & inference</i><br/>00.04"]
+    M --> G
+    S --> G
+
+    G --> F["<b>SURVIVE</b> contact with float64<br/><i>Numerical methods</i><br/>00.06"]
+
+    classDef problem fill:#1f2937,stroke:#111827,color:#f9fafb
+    classDef pillar  fill:#dbeafe,stroke:#2563eb,color:#1e3a5f
+    classDef capstone fill:#dcfce7,stroke:#16a34a,color:#14532d
+    class P problem
+    class R,M,S pillar
+    class G,F capstone
 ```
 
 Read concretely, training a logistic regression uses all six at once:

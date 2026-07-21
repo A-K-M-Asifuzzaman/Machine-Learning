@@ -36,7 +36,7 @@ Three facts force linear algebra on us.
 **Fact 1 — Data is naturally a matrix.** $n$ examples, each described by $d$ numbers, is
 $\mathbf{X} \in \mathbb{R}^{n \times d}$. This isn't a convenience; it means every statement
 about your dataset is a statement about a matrix. "The features are redundant" means
-$\operatorname{rank}(\mathbf{X}) < d$. "Two features are duplicates" means two columns are
+$\mathrm{rank}(\mathbf{X}) < d$. "Two features are duplicates" means two columns are
 linearly dependent. "The data lies on a plane" means the rows live in a 2-dimensional subspace.
 
 **Fact 2 — The simplest useful model is linear.** $\hat{y} = \mathbf{w}^{\top}\mathbf{x}$. Every
@@ -97,7 +97,7 @@ $c_1, \dots, c_k$:
 
 $$c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \dots + c_k\mathbf{v}_k$$
 
-**Span.** $\operatorname{span}\{\mathbf{v}_1,\dots,\mathbf{v}_k\}$ is the set of *all* linear
+**Span.** $\mathrm{span}\{\mathbf{v}_1,\dots,\mathbf{v}_k\}$ is the set of *all* linear
 combinations — everything reachable from those vectors. Geometrically: one nonzero vector spans a
 line; two independent vectors span a plane; $k$ independent vectors span a $k$-dimensional
 subspace.
@@ -153,7 +153,7 @@ $$\mathbf{A}\mathbf{x} = x_1 \mathbf{a}^{(1)} + x_2\mathbf{a}^{(2)} + \dots + x_
 
 The **column view is the important one**. It says immediately:
 
-$$\boxed{\;\mathbf{A}\mathbf{x} \text{ always lands in } \operatorname{span}\{\text{columns of } \mathbf{A}\}\;}$$
+$$\boxed{\;\mathbf{A}\mathbf{x} \text{ always lands in } \mathrm{span}\{\text{columns of } \mathbf{A}\}\;}$$
 
 So $\mathbf{A}\mathbf{x} = \mathbf{b}$ has a solution **if and only if** $\mathbf{b}$ lies in the
 column space of $\mathbf{A}$. When it doesn't — which is the normal situation in regression,
@@ -195,8 +195,8 @@ in practice: constants and numerical stability kill them.)
 **Orthogonal matrices deserve special attention.** $\mathbf{Q}^{\top}\mathbf{Q} = \mathbf{I}$
 means $\mathbf{Q}^{-1} = \mathbf{Q}^{\top}$ — the inverse is free. And
 
-$$\|\mathbf{Q}\mathbf{x}\|_2^2 = (\mathbf{Q}\mathbf{x})^{\top}(\mathbf{Q}\mathbf{x})
-= \mathbf{x}^{\top}\mathbf{Q}^{\top}\mathbf{Q}\mathbf{x} = \mathbf{x}^{\top}\mathbf{x} = \|\mathbf{x}\|_2^2$$
+$$\Vert \mathbf{Q}\mathbf{x}\Vert _2^2 = (\mathbf{Q}\mathbf{x})^{\top}(\mathbf{Q}\mathbf{x})
+= \mathbf{x}^{\top}\mathbf{Q}^{\top}\mathbf{Q}\mathbf{x} = \mathbf{x}^{\top}\mathbf{x} = \Vert \mathbf{x}\Vert _2^2$$
 
 Lengths are preserved, so no error is ever amplified. **This is why every numerically serious
 algorithm — QR, SVD, Householder — is built out of orthogonal transformations.**
@@ -207,7 +207,7 @@ algorithm — QR, SVD, Householder — is built out of orthogonal transformation
 
 ### 4.1 Rank
 
-$$\operatorname{rank}(\mathbf{A}) = \dim(\text{column space}) = \dim(\text{row space})$$
+$$\mathrm{rank}(\mathbf{A}) = \dim(\text{column space}) = \dim(\text{row space})$$
 
 That row rank equals column rank is not obvious and is one of the genuinely surprising theorems
 of the subject. Rank is **the number of independent directions the matrix actually uses** — its
@@ -215,22 +215,22 @@ true information content.
 
 Properties worth memorizing:
 
-- $\operatorname{rank}(\mathbf{A}) \le \min(m, n)$. Equality = "full rank".
-- $\operatorname{rank}(\mathbf{A}\mathbf{B}) \le \min(\operatorname{rank}\mathbf{A}, \operatorname{rank}\mathbf{B})$ — **multiplying can never increase rank.**
-- $\operatorname{rank}(\mathbf{A}) = \operatorname{rank}(\mathbf{A}^{\top}\mathbf{A}) = \operatorname{rank}(\mathbf{A}\mathbf{A}^{\top})$
-- $\operatorname{rank}(\mathbf{A}) = $ number of nonzero singular values (§12) — **the only numerically reliable way to compute it.**
+- $\mathrm{rank}(\mathbf{A}) \le \min(m, n)$. Equality = "full rank".
+- $\mathrm{rank}(\mathbf{A}\mathbf{B}) \le \min(\mathrm{rank}\mathbf{A}, \mathrm{rank}\mathbf{B})$ — **multiplying can never increase rank.**
+- $\mathrm{rank}(\mathbf{A}) = \mathrm{rank}(\mathbf{A}^{\top}\mathbf{A}) = \mathrm{rank}(\mathbf{A}\mathbf{A}^{\top})$
+- $\mathrm{rank}(\mathbf{A}) = $ number of nonzero singular values (§12) — **the only numerically reliable way to compute it.**
 
 > **ML translation.** Rank is why **low-rank adaptation (LoRA)** works. Fine-tuning a weight
 > matrix $\mathbf{W} \in \mathbb{R}^{m \times n}$ normally updates $mn$ parameters. LoRA writes
 > the update as $\Delta\mathbf{W} = \mathbf{B}\mathbf{A}$ with $\mathbf{B} \in \mathbb{R}^{m\times r}$,
 > $\mathbf{A} \in \mathbb{R}^{r \times n}$, $r \ll \min(m,n)$. By the rank inequality above,
-> $\operatorname{rank}(\Delta\mathbf{W}) \le r$, and the parameter count drops from $mn$ to
+> $\mathrm{rank}(\Delta\mathbf{W}) \le r$, and the parameter count drops from $mn$ to
 > $r(m+n)$. For $m = n = 4096, r = 8$: 16.7M → 65K parameters, a 256× reduction. The empirical
 > claim LoRA makes is that the *useful* fine-tuning update genuinely is near-low-rank.
 
 ### 4.2 The four fundamental subspaces
 
-For $\mathbf{A} \in \mathbb{R}^{m\times n}$ with $r = \operatorname{rank}(\mathbf{A})$:
+For $\mathbf{A} \in \mathbb{R}^{m\times n}$ with $r = \mathrm{rank}(\mathbf{A})$:
 
 | Subspace | Definition | Lives in | Dimension |
 |---|---|---|---|
@@ -239,7 +239,7 @@ For $\mathbf{A} \in \mathbb{R}^{m\times n}$ with $r = \operatorname{rank}(\mathb
 | **Row space** $C(\mathbf{A}^{\top})$ | $\{\mathbf{A}^{\top}\mathbf{y} : \mathbf{y}\in\mathbb{R}^{m}\}$ | $\mathbb{R}^{n}$ | $r$ |
 | **Left null space** $N(\mathbf{A}^{\top})$ | $\{\mathbf{y} : \mathbf{A}^{\top}\mathbf{y} = \mathbf{0}\}$ | $\mathbb{R}^{m}$ | $m - r$ |
 
-**Rank-nullity theorem**: $\operatorname{rank}(\mathbf{A}) + \dim N(\mathbf{A}) = n$.
+**Rank-nullity theorem**: $\mathrm{rank}(\mathbf{A}) + \dim N(\mathbf{A}) = n$.
 
 The deep structural fact — the **Fundamental Theorem of Linear Algebra** — is that these pair up
 *orthogonally*:
@@ -259,7 +259,7 @@ a nontrivial null space (guaranteed when $d > n$: more features than examples), 
 weights are not unique** — there is an entire $(n-r)$-dimensional flat of equally optimal
 solutions. Regularization's job is to pick one of them. Ridge picks the minimum-$\ell_2$-norm
 solution; that is not an aesthetic choice but the direct consequence of adding
-$\lambda\|\mathbf{w}\|_2^2$ to a problem whose loss term is flat along the null space.
+$\lambda\Vert \mathbf{w}\Vert _2^2$ to a problem whose loss term is flat along the null space.
 
 ---
 
@@ -268,7 +268,7 @@ $\lambda\|\mathbf{w}\|_2^2$ to a problem whose loss term is flat along the null 
 ### 5.1 Inner product
 
 $$\langle \mathbf{x}, \mathbf{y}\rangle = \mathbf{x}^{\top}\mathbf{y} = \sum_{i=1}^{d} x_i y_i
-= \|\mathbf{x}\|\,\|\mathbf{y}\|\cos\theta$$
+= \Vert \mathbf{x}\Vert \,\Vert \mathbf{y}\Vert \cos\theta$$
 
 The second equality is the one to internalize: **the dot product measures alignment.**
 
@@ -285,11 +285,11 @@ question with magnitude divided out.
 
 ### 5.2 Norms
 
-A norm measures length. It must satisfy: $\|\mathbf{x}\| \ge 0$ with equality iff
-$\mathbf{x} = \mathbf{0}$; $\|c\mathbf{x}\| = |c|\|\mathbf{x}\|$; and the triangle inequality
-$\|\mathbf{x} + \mathbf{y}\| \le \|\mathbf{x}\| + \|\mathbf{y}\|$.
+A norm measures length. It must satisfy: $\Vert \mathbf{x}\Vert  \ge 0$ with equality iff
+$\mathbf{x} = \mathbf{0}$; $\Vert c\mathbf{x}\Vert  = |c|\Vert \mathbf{x}\Vert $; and the triangle inequality
+$\Vert \mathbf{x} + \mathbf{y}\Vert  \le \Vert \mathbf{x}\Vert  + \Vert \mathbf{y}\Vert $.
 
-$$\|\mathbf{x}\|_p = \left(\sum_{i=1}^d |x_i|^p\right)^{1/p}$$
+$$\Vert \mathbf{x}\Vert _p = \left(\sum_{i=1}^d |x_i|^p\right)^{1/p}$$
 
 | Norm | Formula | Unit ball shape | Role in ML |
 |---|---|---|---|
@@ -298,7 +298,7 @@ $$\|\mathbf{x}\|_p = \left(\sum_{i=1}^d |x_i|^p\right)^{1/p}$$
 | $\ell_2$ | $\sqrt{\sum_i x_i^2}$ | circle | **Ridge**, weight decay, Euclidean distance |
 | $\ell_\infty$ | $\max_i \lvert x_i \rvert$ | square | adversarial robustness budgets |
 
-**Why $\ell_1$ gives sparsity, geometrically.** Minimizing loss subject to $\|\mathbf{w}\|_1 \le t$
+**Why $\ell_1$ gives sparsity, geometrically.** Minimizing loss subject to $\Vert \mathbf{w}\Vert _1 \le t$
 means finding where the loss contours first touch the constraint ball. The $\ell_1$ ball is a
 diamond — it has **corners on the axes**, and a corner on axis $j$ is a point where every other
 coordinate is exactly zero. A randomly-oriented contour is far more likely to first touch a
@@ -307,8 +307,8 @@ generically has all coordinates nonzero but small. That is the entire intuition 
 Lasso-vs-Ridge, and it is developed fully in [03.02](../../03-supervised-learning/02-regularized-linear-models/).
 
 **Matrix norms.** The Frobenius norm treats a matrix as a long vector:
-$\|\mathbf{A}\|_F = \sqrt{\sum_{ij} a_{ij}^2} = \sqrt{\operatorname{tr}(\mathbf{A}^{\top}\mathbf{A})}
-= \sqrt{\sum_i \sigma_i^2}$. The **spectral norm** $\|\mathbf{A}\|_2 = \sigma_{\max}$ is the
+$\Vert \mathbf{A}\Vert _F = \sqrt{\sum_{ij} a_{ij}^2} = \sqrt{\mathrm{tr}(\mathbf{A}^{\top}\mathbf{A})}
+= \sqrt{\sum_i \sigma_i^2}$. The **spectral norm** $\Vert \mathbf{A}\Vert _2 = \sigma_{\max}$ is the
 maximum stretch factor the matrix applies to any vector — the quantity that controls whether
 gradients explode through a layer.
 
@@ -368,7 +368,7 @@ $\mathbf{b}$ to the residual.
 
 Here is the payoff. The linear regression problem is
 
-$$\min_{\mathbf{w}} \; \|\mathbf{y} - \mathbf{X}\mathbf{w}\|_2^2$$
+$$\min_{\mathbf{w}} \; \Vert \mathbf{y} - \mathbf{X}\mathbf{w}\Vert _2^2$$
 
 **The geometric argument, in full.** $\mathbf{X}\mathbf{w}$ ranges over $C(\mathbf{X})$, a
 subspace of $\mathbb{R}^{n}$ of dimension at most $d$. Since $n > d$, the target $\mathbf{y}$
@@ -405,10 +405,10 @@ Same answer. But notice what the geometric version gives you that the calculus v
 3. **It tells you the residual is orthogonal to every feature** — the basis of every regression
    diagnostic plot you will ever draw.
 
-$$\hat{\mathbf{y}} = \mathbf{X}\hat{\mathbf{w}} = \underbrace{\mathbf{X}(\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}}_{\text{the \emph{hat matrix} } \mathbf{H}}\mathbf{y}$$
+$$\hat{\mathbf{y}} = \mathbf{X}\hat{\mathbf{w}} = \underbrace{\mathbf{X}(\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}}_{\text{the \textit{hat matrix} } \mathbf{H}}\mathbf{y}$$
 
 $\mathbf{H}$ "puts the hat on $\mathbf{y}$". Its diagonal entries $h_{ii}$ are the **leverages** —
-how much example $i$ pulls its own fitted value — and $\operatorname{tr}(\mathbf{H}) = d$, giving
+how much example $i$ pulls its own fitted value — and $\mathrm{tr}(\mathbf{H}) = d$, giving
 the standard "effective degrees of freedom" count.
 
 > ⚠️ **Never actually compute $(\mathbf{X}^{\top}\mathbf{X})^{-1}$.** Forming
@@ -428,7 +428,7 @@ $$
 \begin{aligned}
 \mathbf{u}_k &= \mathbf{a}_k - \sum_{j<k} (\mathbf{q}_j^{\top}\mathbf{a}_k)\,\mathbf{q}_j
 & &\text{(remove components along previous directions)}\\
-\mathbf{q}_k &= \mathbf{u}_k / \|\mathbf{u}_k\|_2 & &\text{(normalize)}
+\mathbf{q}_k &= \mathbf{u}_k / \Vert \mathbf{u}_k\Vert _2 & &\text{(normalize)}
 \end{aligned}
 $$
 
@@ -472,15 +472,15 @@ normalizer is exactly the volume correction) and in normalizing flows (the chang
 formula needs the Jacobian determinant — which is why flow architectures are designed to have
 *triangular* Jacobians, whose determinant is just the product of the diagonal).
 
-**Trace** $\operatorname{tr}(\mathbf{A}) = \sum_i a_{ii} = \sum_i \lambda_i$.
+**Trace** $\mathrm{tr}(\mathbf{A}) = \sum_i a_{ii} = \sum_i \lambda_i$.
 
 The property that earns its keep is **cyclic invariance**:
 
-$$\operatorname{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) = \operatorname{tr}(\mathbf{B}\mathbf{C}\mathbf{A}) = \operatorname{tr}(\mathbf{C}\mathbf{A}\mathbf{B})$$
+$$\mathrm{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) = \mathrm{tr}(\mathbf{B}\mathbf{C}\mathbf{A}) = \mathrm{tr}(\mathbf{C}\mathbf{A}\mathbf{B})$$
 
-plus the **trace trick** $\mathbf{x}^{\top}\mathbf{A}\mathbf{x} = \operatorname{tr}(\mathbf{A}\mathbf{x}\mathbf{x}^{\top})$,
+plus the **trace trick** $\mathbf{x}^{\top}\mathbf{A}\mathbf{x} = \mathrm{tr}(\mathbf{A}\mathbf{x}\mathbf{x}^{\top})$,
 which converts a scalar quadratic form into something you can push an expectation through:
-$\mathbb{E}[\mathbf{x}^{\top}\mathbf{A}\mathbf{x}] = \operatorname{tr}(\mathbf{A}\,\mathbb{E}[\mathbf{x}\mathbf{x}^{\top}])$.
+$\mathbb{E}[\mathbf{x}^{\top}\mathbf{A}\mathbf{x}] = \mathrm{tr}(\mathbf{A}\,\mathbb{E}[\mathbf{x}\mathbf{x}^{\top}])$.
 This shows up constantly in deriving expected losses and in Gaussian identities.
 
 ---
@@ -582,7 +582,7 @@ by bad local minima but *are* slowed by saddle points. See
 Two more consequences:
 
 - **$\mathbf{A}^{\top}\mathbf{A}$ is always PSD**: $\mathbf{x}^{\top}\mathbf{A}^{\top}\mathbf{A}\mathbf{x}
-  = \|\mathbf{A}\mathbf{x}\|_2^2 \ge 0$. Hence covariance and Gram matrices always have
+  = \Vert \mathbf{A}\mathbf{x}\Vert _2^2 \ge 0$. Hence covariance and Gram matrices always have
   non-negative eigenvalues — variance can't be negative, and the geometry agrees.
 - **Ridge regression, spectrally**: $\mathbf{X}^{\top}\mathbf{X} + \lambda\mathbf{I}$ has
   eigenvalues $\lambda_i + \lambda$. Adding $\lambda > 0$ lifts every eigenvalue away from zero,
@@ -639,13 +639,13 @@ $\mathbf{u}_i = \mathbf{A}\mathbf{v}_i/\sigma_i$ for $\sigma_i > 0$, extended to
 
 | Quantity | From the SVD |
 |---|---|
-| $\operatorname{rank}(\mathbf{A})$ | number of $\sigma_i > 0$ |
+| $\mathrm{rank}(\mathbf{A})$ | number of $\sigma_i > 0$ |
 | $C(\mathbf{A})$ | span of first $r$ columns of $\mathbf{U}$ |
 | $N(\mathbf{A})$ | span of last $n - r$ columns of $\mathbf{V}$ |
 | $C(\mathbf{A}^{\top})$ | span of first $r$ columns of $\mathbf{V}$ |
 | $N(\mathbf{A}^{\top})$ | span of last $m - r$ columns of $\mathbf{U}$ |
-| $\|\mathbf{A}\|_2$ | $\sigma_1$ |
-| $\|\mathbf{A}\|_F$ | $\sqrt{\sum_i \sigma_i^2}$ |
+| $\Vert \mathbf{A}\Vert _2$ | $\sigma_1$ |
+| $\Vert \mathbf{A}\Vert _F$ | $\sqrt{\sum_i \sigma_i^2}$ |
 | $\kappa(\mathbf{A})$ | $\sigma_1/\sigma_r$ |
 
 All four fundamental subspaces, both norms, the rank, and the conditioning — from one
@@ -684,7 +684,7 @@ Truncate to the top $k$ terms: $\mathbf{A}_k = \sum_{i=1}^{k}\sigma_i\mathbf{u}_
 **Theorem (Eckart-Young-Mirsky).** $\mathbf{A}_k$ is the *best possible* rank-$k$ approximation
 to $\mathbf{A}$, in both the spectral and Frobenius norms:
 
-$$\min_{\operatorname{rank}(\mathbf{B}) \le k} \|\mathbf{A} - \mathbf{B}\|_F = \|\mathbf{A}-\mathbf{A}_k\|_F = \sqrt{\sum_{i>k}\sigma_i^2}$$
+$$\min_{\mathrm{rank}(\mathbf{B}) \le k} \Vert \mathbf{A} - \mathbf{B}\Vert _F = \Vert \mathbf{A}-\mathbf{A}_k\Vert _F = \sqrt{\sum_{i>k}\sigma_i^2}$$
 
 This is a remarkable guarantee: a *greedy* truncation is *globally* optimal. It is why the SVD
 underlies image compression, latent semantic analysis, matrix-factorization recommenders,
@@ -696,7 +696,7 @@ $\sum_{i\le k}\sigma_i^2 / \sum_i \sigma_i^2$ and stop where it plateaus.
 ### 13.2 The Moore-Penrose pseudoinverse
 
 $$\mathbf{A}^{+} = \mathbf{V}\boldsymbol{\Sigma}^{+}\mathbf{U}^{\top},
-\qquad \boldsymbol{\Sigma}^{+} = \operatorname{diag}(1/\sigma_1, \dots, 1/\sigma_r, 0, \dots, 0)$$
+\qquad \boldsymbol{\Sigma}^{+} = \mathrm{diag}(1/\sigma_1, \dots, 1/\sigma_r, 0, \dots, 0)$$
 
 Invert the nonzero singular values; leave the zeros alone. Then $\hat{\mathbf{x}} =
 \mathbf{A}^{+}\mathbf{b}$ gives:
@@ -707,7 +707,7 @@ Invert the nonzero singular values; leave the zeros alone. Then $\hat{\mathbf{x}
 
 That last case is the important one. When $d > n$ (more features than examples) there are
 infinitely many perfect fits; the pseudoinverse silently returns the one with smallest
-$\|\mathbf{w}\|_2$ — an implicit ridge-like regularization, arising purely from the geometry.
+$\Vert \mathbf{w}\Vert _2$ — an implicit ridge-like regularization, arising purely from the geometry.
 This connects directly to why over-parameterized networks trained by gradient descent generalize:
 GD from zero initialization converges to a minimum-norm solution too.
 
@@ -724,10 +724,10 @@ has the same shape as $\mathbf{x}$.
 |---|---|---|
 | $\mathbf{a}^{\top}\mathbf{x}$ | $\mathbf{a}$ | linear |
 | $\mathbf{x}^{\top}\mathbf{A}\mathbf{x}$ | $(\mathbf{A} + \mathbf{A}^{\top})\mathbf{x}$ | $= 2\mathbf{A}\mathbf{x}$ if $\mathbf{A}$ symmetric |
-| $\|\mathbf{x}\|_2^2$ | $2\mathbf{x}$ | special case, $\mathbf{A}=\mathbf{I}$ |
-| $\|\mathbf{A}\mathbf{x}-\mathbf{b}\|_2^2$ | $2\mathbf{A}^{\top}(\mathbf{A}\mathbf{x}-\mathbf{b})$ | **least squares** |
+| $\Vert \mathbf{x}\Vert _2^2$ | $2\mathbf{x}$ | special case, $\mathbf{A}=\mathbf{I}$ |
+| $\Vert \mathbf{A}\mathbf{x}-\mathbf{b}\Vert _2^2$ | $2\mathbf{A}^{\top}(\mathbf{A}\mathbf{x}-\mathbf{b})$ | **least squares** |
 | $\log\det(\mathbf{X})$ | $\mathbf{X}^{-\top}$ | w.r.t. matrix $\mathbf{X}$ |
-| $\operatorname{tr}(\mathbf{A}\mathbf{X})$ | $\mathbf{A}^{\top}$ | w.r.t. matrix $\mathbf{X}$ |
+| $\mathrm{tr}(\mathbf{A}\mathbf{X})$ | $\mathbf{A}^{\top}$ | w.r.t. matrix $\mathbf{X}$ |
 
 ### 14.2 Derivation of the quadratic form gradient
 
@@ -777,7 +777,7 @@ $$\kappa(\mathbf{A}) = \frac{\sigma_{\max}}{\sigma_{\min}}$$
 
 It bounds how much a relative input perturbation can be amplified in the output:
 
-$$\frac{\|\delta\mathbf{x}\|}{\|\mathbf{x}\|} \le \kappa(\mathbf{A})\,\frac{\|\delta\mathbf{b}\|}{\|\mathbf{b}\|}$$
+$$\frac{\Vert \delta\mathbf{x}\Vert }{\Vert \mathbf{x}\Vert } \le \kappa(\mathbf{A})\,\frac{\Vert \delta\mathbf{b}\Vert }{\Vert \mathbf{b}\Vert }$$
 
 | $\kappa$ | Interpretation |
 |---|---|

@@ -13,10 +13,10 @@ satisfies $\mathbf{P}^{2} = \mathbf{P}$ and $\mathbf{P}^{\top} = \mathbf{P}$. Th
 converse is what defines an orthogonal projection: any symmetric idempotent matrix projects onto
 its own column space.
 
-**D2.** Show $\operatorname{rank}(\mathbf{A}) = \operatorname{rank}(\mathbf{A}^{\top}\mathbf{A})$.
+**D2.** Show $\mathrm{rank}(\mathbf{A}) = \mathrm{rank}(\mathbf{A}^{\top}\mathbf{A})$.
 *Hint*: show the two matrices have the same null space, then apply rank-nullity.
 
-**D3.** Derive the normal equations twice — once by setting $\nabla_{\mathbf{w}}\|\mathbf{y}-\mathbf{X}\mathbf{w}\|^2 = 0$,
+**D3.** Derive the normal equations twice — once by setting $\nabla_{\mathbf{w}}\Vert \mathbf{y}-\mathbf{X}\mathbf{w}\Vert ^2 = 0$,
 once by requiring the residual to be orthogonal to $C(\mathbf{X})$. State precisely where each
 derivation uses the assumption that $\mathbf{X}$ has full column rank.
 
@@ -29,7 +29,7 @@ condition is it positive *definite* rather than merely semidefinite?
 
 **D6.** Derive $\nabla_{\mathbf{x}}(\mathbf{x}^{\top}\mathbf{A}\mathbf{x}) = (\mathbf{A}+\mathbf{A}^{\top})\mathbf{x}$
 from components, without looking at §14.2. Then derive
-$\nabla_{\mathbf{w}}\|\mathbf{y}-\mathbf{X}\mathbf{w}\|_2^2$ using it.
+$\nabla_{\mathbf{w}}\Vert \mathbf{y}-\mathbf{X}\mathbf{w}\Vert _2^2$ using it.
 
 **D7.** Show that the singular values of $\mathbf{A}$ are the square roots of the eigenvalues of
 $\mathbf{A}^{\top}\mathbf{A}$, and that $\mathbf{A}$ and $\mathbf{A}^{\top}$ have the same nonzero
@@ -92,7 +92,7 @@ exact solution respectively.
 
 **I8.** *(The dummy variable trap, measured.)* Build a design matrix that one-hot encodes a
 3-category feature into 3 columns *plus* an intercept. Compute $\kappa(\mathbf{X})$ and
-$\operatorname{rank}(\mathbf{X})$. Try to solve the normal equations. Now drop one category and
+$\mathrm{rank}(\mathbf{X})$. Try to solve the normal equations. Now drop one category and
 repeat. Explain the difference using §4.2.
 
 **I9.** *(LoRA, in miniature.)* Take a $512 \times 512$ random matrix $\mathbf{W}$ and a target

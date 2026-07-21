@@ -93,13 +93,13 @@ we minimize $\hat{R}_n$ but care about $R$.
 | $p(x)$ | probability density (continuous) or mass (discrete) function |
 | $X \sim \mathcal{D}$ | $X$ is distributed according to $\mathcal{D}$ |
 | $\mathbb{E}[X]$, $\mathbb{E}_{p}[X]$ | expectation (subscript names the distribution) |
-| $\operatorname{Var}(X)$, $\operatorname{Cov}(X, Y)$ | variance, covariance |
+| $\mathrm{Var}(X)$, $\mathrm{Cov}(X, Y)$ | variance, covariance |
 | $\boldsymbol{\Sigma}$ | covariance matrix |
 | $\boldsymbol{\mu}$ | mean vector |
 | $\mathcal{N}(\mu, \sigma^{2})$ | Gaussian / normal distribution |
 | $\mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma})$ | multivariate Gaussian |
-| $\operatorname{Bern}(\pi)$, $\operatorname{Bin}(n, \pi)$ | Bernoulli, binomial |
-| $\operatorname{Cat}(\boldsymbol{\pi})$, $\operatorname{Mult}$ | categorical, multinomial |
+| $\mathrm{Bern}(\pi)$, $\mathrm{Bin}(n, \pi)$ | Bernoulli, binomial |
+| $\mathrm{Cat}(\boldsymbol{\pi})$, $\mathrm{Mult}$ | categorical, multinomial |
 | $X \perp Y \mid Z$ | $X$ conditionally independent of $Y$ given $Z$ |
 | $\mathcal{L}(\boldsymbol{\theta})$ | likelihood; $\ell(\boldsymbol{\theta}) = \log \mathcal{L}(\boldsymbol{\theta})$ |
 | $\mathbb{1}[\cdot]$ | indicator function (1 if true, 0 otherwise) |
@@ -112,12 +112,12 @@ we minimize $\hat{R}_n$ but care about $R$.
 |---|---|
 | $\mathbf{A}^{\top}$ | transpose |
 | $\mathbf{A}^{-1}$, $\mathbf{A}^{+}$ | inverse, Moore-Penrose pseudoinverse |
-| $\operatorname{tr}(\mathbf{A})$, $\det(\mathbf{A})$ | trace, determinant |
-| $\operatorname{rank}(\mathbf{A})$ | rank |
+| $\mathrm{tr}(\mathbf{A})$, $\det(\mathbf{A})$ | trace, determinant |
+| $\mathrm{rank}(\mathbf{A})$ | rank |
 | $\mathbf{I}_d$ | $d \times d$ identity |
 | $\langle \mathbf{u}, \mathbf{v} \rangle = \mathbf{u}^{\top}\mathbf{v}$ | inner product |
-| $\|\mathbf{x}\|_p$ | $\ell_p$ norm; $\|\mathbf{x}\|_2$ Euclidean, $\|\mathbf{x}\|_1$ Manhattan, $\|\mathbf{x}\|_0$ count of nonzeros |
-| $\|\mathbf{A}\|_F$ | Frobenius norm |
+| $\Vert \mathbf{x}\Vert _p$ | $\ell_p$ norm; $\Vert \mathbf{x}\Vert _2$ Euclidean, $\Vert \mathbf{x}\Vert _1$ Manhattan, $\Vert \mathbf{x}\Vert _0$ count of nonzeros |
+| $\Vert \mathbf{A}\Vert _F$ | Frobenius norm |
 | $\odot$ | elementwise (Hadamard) product |
 | $\otimes$ | Kronecker product |
 | $\mathbf{u} \succeq 0$ | elementwise non-negativity |
@@ -140,7 +140,7 @@ every autodiff framework returns.
 | $H(X) = -\sum_x p(x)\log p(x)$ | entropy |
 | $H(X, Y)$, $H(Y \mid X)$ | joint entropy, conditional entropy |
 | $H(p, q) = -\sum_x p(x)\log q(x)$ | cross-entropy |
-| $D_{\mathrm{KL}}(p \,\|\, q)$ | Kullback-Leibler divergence |
+| $D_{\mathrm{KL}}(p \,\Vert \, q)$ | Kullback-Leibler divergence |
 | $I(X; Y)$ | mutual information |
 
 Logs are natural ($\ln$) unless a chapter says otherwise; units are nats. Where bits are more

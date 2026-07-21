@@ -256,6 +256,67 @@ math you just read produces the same numbers the library does.
 
 ---
 
+## How the parts depend on each other
+
+```mermaid
+flowchart LR
+    P0["<b>Part 0</b><br/>Mathematical<br/>foundations"]
+    P1["<b>Part 1</b><br/>Python toolkit"]
+    P2["<b>Part 2</b><br/>Data"]
+    P3["<b>Part 3</b><br/>Classical<br/>supervised"]
+    P4["<b>Part 4</b><br/>Unsupervised"]
+    P5["<b>Part 5</b><br/>Evaluation &<br/>model selection"]
+    P6["<b>Part 6</b><br/>Ensembles"]
+    P7["<b>Part 7</b><br/>Deep learning<br/>foundations"]
+
+    CV["<b>8</b> Computer vision"]
+    SEQ["<b>9</b> Sequence models"]
+    NLP["<b>10</b> NLP"]
+    LLM["<b>11</b> Transformers<br/>& LLMs"]
+    GEN["<b>12</b> Generative"]
+    RL["<b>13</b> Reinforcement<br/>learning"]
+    MISC["<b>14-16</b> Graph ML ·<br/>Time series · RecSys"]
+
+    RESP["<b>17-18</b> XAI ·<br/>Responsible ML"]
+    PROD["<b>19-20</b> MLOps ·<br/>System design"]
+    RES["<b>21</b> Research"]
+
+    P0 --> P3
+    P0 --> P7
+    P1 --> P2
+    P2 --> P3
+    P3 --> P5
+    P3 --> P4
+    P5 --> P6
+    P3 --> P7
+    P6 --> P7
+
+    P7 --> CV
+    P7 --> SEQ
+    P7 --> GEN
+    P7 --> RL
+    P7 --> MISC
+    SEQ --> NLP
+    NLP --> LLM
+    CV --> LLM
+
+    P6 --> RESP
+    P7 --> RESP
+    RESP --> PROD
+    LLM --> PROD
+    PROD --> RES
+
+    classDef found fill:#ede9fe,stroke:#7c3aed,color:#3b0764
+    classDef core  fill:#dbeafe,stroke:#2563eb,color:#1e3a5f
+    classDef deep  fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef applied fill:#fef3c7,stroke:#d97706,color:#78350f
+
+    class P0,P1 found
+    class P2,P3,P4,P5,P6 core
+    class P7,CV,SEQ,NLP,LLM,GEN,RL,MISC deep
+    class RESP,PROD,RES applied
+```
+
 ## Learning paths
 
 You do not have to read this front to back. Pick a path:
