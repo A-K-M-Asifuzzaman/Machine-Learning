@@ -31,7 +31,7 @@ Each of those is a real failure mode, and none of them is diagnosable from the l
 |---|---|---|:--:|
 | 00.01 | [Linear Algebra](01-linear-algebra/) | How do we represent and transform data? | 🟢 |
 | 00.02 | [Calculus & Optimization](02-calculus-and-optimization/) | How do we find the best parameters? | 🟢 |
-| 00.03 | [Probability](03-probability/) | How do we reason under uncertainty? | ⚪ |
+| 00.03 | [Probability](03-probability/) | How do we reason under uncertainty? | 🟢 |
 | 00.04 | [Statistics & Inference](04-statistics-and-inference/) | How do we learn from a finite sample? | ⚪ |
 | 00.05 | [Information Theory](05-information-theory/) | How do we measure information and surprise? | ⚪ |
 | 00.06 | [Numerical Methods](06-numerical-methods/) | Why does correct math give wrong answers? | ⚪ |
