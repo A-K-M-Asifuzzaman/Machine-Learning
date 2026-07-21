@@ -11,7 +11,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 
 | Ch. | Topic | Theory | From scratch | Notebook | Exercises |
 |---|---|:--:|:--:|:--:|:--:|
-| 00.01 | Linear algebra | ⚪ | ⚪ | ⚪ | ⚪ |
+| 00.01 | Linear algebra | 🟢 | 🟢 | ⚪ | 🟢 |
 | 00.02 | Calculus & optimization | ⚪ | ⚪ | ⚪ | ⚪ |
 | 00.03 | Probability | ⚪ | ⚪ | ⚪ | ⚪ |
 | 00.04 | Statistics & inference | ⚪ | ⚪ | ⚪ | ⚪ |
