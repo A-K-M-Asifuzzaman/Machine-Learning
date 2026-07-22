@@ -16,7 +16,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 00.03 | Probability | 🟢 | 🟢 | ⚪ | 🟢 |
 | 00.04 | Statistics & inference | 🟢 | 🟢 | ⚪ | 🟢 |
 | 00.05 | Information theory | 🟢 | 🟢 | ⚪ | 🟢 |
-| 00.06 | Numerical methods | ⚪ | ⚪ | ⚪ | ⚪ |
+| 00.06 | Numerical methods | 🟢 | 🟢 | ⚪ | 🟢 |
 
 ## Part 1 — Python toolkit
 
