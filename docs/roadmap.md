@@ -45,7 +45,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 |---|---|:--:|:--:|:--:|:--:|
 | 03.01 | Linear regression | 🟢 | 🟢 | ⚪ | 🟢 |
 | 03.02 | Regularized linear models | 🟢 | 🟢 | ⚪ | 🟢 |
-| 03.03 | Basis expansion & splines | ⚪ | ⚪ | ⚪ | ⚪ |
+| 03.03 | Basis expansion & splines | 🟢 | 🟢 | ⚪ | 🟢 |
 | 03.04 | Logistic regression | ⚪ | ⚪ | ⚪ | ⚪ |
 | 03.05 | Generative classifiers | ⚪ | ⚪ | ⚪ | ⚪ |
 | 03.06 | k-Nearest Neighbours | ⚪ | ⚪ | ⚪ | ⚪ |
