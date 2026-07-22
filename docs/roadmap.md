@@ -43,7 +43,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 
 | Ch. | Topic | Theory | From scratch | Notebook | Exercises |
 |---|---|:--:|:--:|:--:|:--:|
-| 03.01 | Linear regression | ⚪ | ⚪ | ⚪ | ⚪ |
+| 03.01 | Linear regression | 🟢 | 🟢 | ⚪ | 🟢 |
 | 03.02 | Regularized linear models | ⚪ | ⚪ | ⚪ | ⚪ |
 | 03.03 | Basis expansion & splines | ⚪ | ⚪ | ⚪ | ⚪ |
 | 03.04 | Logistic regression | ⚪ | ⚪ | ⚪ | ⚪ |
