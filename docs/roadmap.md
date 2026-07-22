@@ -48,7 +48,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 03.03 | Basis expansion & splines | 🟢 | 🟢 | ⚪ | 🟢 |
 | 03.04 | Logistic regression | 🟢 | 🟢 | ⚪ | 🟢 |
 | 03.05 | Generative classifiers | 🟢 | 🟢 | ⚪ | 🟢 |
-| 03.06 | k-Nearest Neighbours | ⚪ | ⚪ | ⚪ | ⚪ |
+| 03.06 | k-Nearest Neighbours | 🟢 | 🟢 | ⚪ | 🟢 |
 | 03.07 | Support vector machines | ⚪ | ⚪ | ⚪ | ⚪ |
 | 03.08 | Decision trees | ⚪ | ⚪ | ⚪ | ⚪ |
 | 03.09 | Perceptron | ⚪ | ⚪ | ⚪ | ⚪ |
