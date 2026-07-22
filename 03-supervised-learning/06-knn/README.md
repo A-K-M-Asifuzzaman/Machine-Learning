@@ -78,7 +78,7 @@ The metric *is* the model. Everything KNN believes about similarity lives here.
 | **Minkowski** ($\ell_p$) | $(\sum_j \lvert x_j-z_j\rvert^{p})^{1/p}$ | the general family |
 | **Chebyshev** ($\ell_\infty$) | $\max_j \lvert x_j-z_j\rvert$ | when the worst coordinate matters |
 | **Cosine** | $1 - \frac{\mathbf{x}^{\top}\mathbf{z}}{\Vert\mathbf{x}\Vert\Vert\mathbf{z}\Vert}$ | text, embeddings — magnitude irrelevant |
-| **Hamming** | $\#\{j : x_j \ne z_j\}$ | categorical, binary strings |
+| **Hamming** | $\lvert\{j : x_j \ne z_j\}\rvert$ | categorical, binary strings |
 | **Mahalanobis** | $\sqrt{(\mathbf{x}-\mathbf{z})^{\top}\boldsymbol{\Sigma}^{-1}(\mathbf{x}-\mathbf{z})}$ | correlated features — accounts for covariance |
 
 **Mahalanobis deserves attention.** Euclidean distance treats all directions as equivalent;

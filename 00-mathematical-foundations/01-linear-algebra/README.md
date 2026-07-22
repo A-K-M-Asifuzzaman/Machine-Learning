@@ -293,7 +293,7 @@ $$\Vert \mathbf{x}\Vert _p = \left(\sum_{i=1}^d |x_i|^p\right)^{1/p}$$
 
 | Norm | Formula | Unit ball shape | Role in ML |
 |---|---|---|---|
-| $\ell_0$ | $\#\{i : x_i \neq 0\}$ | — (not a norm) | true sparsity count; NP-hard to optimize |
+| $\ell_0$ | $\lvert\{i : x_i \neq 0\}\rvert$ | — (not a norm) | true sparsity count; NP-hard to optimize |
 | $\ell_1$ | $\sum_i \lvert x_i\rvert$ | diamond | **Lasso** — produces exact zeros |
 | $\ell_2$ | $\sqrt{\sum_i x_i^2}$ | circle | **Ridge**, weight decay, Euclidean distance |
 | $\ell_\infty$ | $\max_i \lvert x_i \rvert$ | square | adversarial robustness budgets |
