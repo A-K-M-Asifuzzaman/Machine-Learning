@@ -143,6 +143,37 @@ function checkFile(file) {
       }
     }
 
+    // Portability check: a construction that renders in a lenient KaTeX can still fail in
+    // a stricter renderer (MathJax) or after GitHub's markdown layer has touched it. The
+    // recurring cause is escaped braces \{ \} being treated as plain { } — which turns a
+    // delimiter like `\big\{` into the invalid `\big{`. We simulate that stripping and
+    // re-render; if the stripped form fails where the original passed, the expression is
+    // renderer-dependent and should be rewritten with \lbrace / \rbrace.
+    const stripped = expr.tex.replace(/\\([{}])/g, "$1");
+    if (stripped !== expr.tex) {
+      let originalOk = true;
+      try {
+        katex.renderToString(expr.tex, { displayMode: expr.display, throwOnError: true });
+      } catch {
+        originalOk = false;
+      }
+      if (originalOk) {
+        try {
+          katex.renderToString(stripped, { displayMode: expr.display, throwOnError: true });
+        } catch (err) {
+          problems.push({
+            line: expr.line,
+            kind: "portability",
+            message:
+              "renders in KaTeX but breaks if \\{ \\} are treated as plain braces " +
+              `(${String(err.message).replace(/KaTeX parse error: /, "").slice(0, 60)}) ` +
+              "— use \\lbrace / \\rbrace where braces act as delimiters.",
+            tex: expr.tex.trim().slice(0, 90),
+          });
+        }
+      }
+    }
+
     try {
       katex.renderToString(expr.tex, {
         displayMode: expr.display,
