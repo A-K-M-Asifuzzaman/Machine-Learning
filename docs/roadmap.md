@@ -97,7 +97,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 07.02 | Backpropagation | 🟢 | 🟢 | ⚪ | 🟢 |
 | 07.03 | Activations | 🟢 | 🟢 | ⚪ | 🟢 |
 | 07.04 | Loss functions | 🟢 | 🟢 | ⚪ | 🟢 |
-| 07.05 | Initialization | ⚪ | ⚪ | ⚪ | ⚪ |
+| 07.05 | Initialization | 🟢 | 🟢 | ⚪ | 🟢 |
 | 07.06 | Optimizers | ⚪ | ⚪ | ⚪ | ⚪ |
 | 07.07 | Normalization | ⚪ | ⚪ | ⚪ | ⚪ |
 | 07.08 | Regularization | ⚪ | ⚪ | ⚪ | ⚪ |
