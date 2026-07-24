@@ -57,7 +57,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 
 | Ch. | Topic | Theory | From scratch | Notebook | Exercises |
 |---|---|:--:|:--:|:--:|:--:|
-| 04.01 | k-Means & variants | ⚪ | ⚪ | ⚪ | ⚪ |
+| 04.01 | k-Means & variants | 🟢 | 🟢 | ⚪ | 🟢 |
 | 04.02 | Hierarchical clustering | ⚪ | ⚪ | ⚪ | ⚪ |
 | 04.03 | Density clustering | ⚪ | ⚪ | ⚪ | ⚪ |
 | 04.04 | Gaussian mixtures & EM | ⚪ | ⚪ | ⚪ | ⚪ |
