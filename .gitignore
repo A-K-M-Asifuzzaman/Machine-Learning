@@ -76,3 +76,9 @@ desktop.ini
 .env
 .env.*
 !.env.example
+
+# Node (math validator tooling)
+node_modules/
+tools/node_modules/
+package-lock.json
+tools/package-lock.json
