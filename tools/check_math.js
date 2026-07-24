@@ -45,6 +45,18 @@ const MARKDOWN_HAZARDS = [
     message: "LaTeX command with no KaTeX equivalent.",
   },
   {
+    // A size/delimiter command (\left \right \big \Big \bigg \bigl ...) followed by an
+    // escaped brace \{ or \}. This renders under a lenient KaTeX but fails elsewhere:
+    // if any layer treats \{ as a plain { (a group-opener, not a delimiter), the result
+    // is `\big{`, which errors as "Missing or unrecognized delimiter for \big" /
+    // "Expected group as argument". Use the named delimiters \lbrace and \rbrace, which
+    // no brace-handling can break.
+    pattern: /\\(left|right|[Bb]igg?[lrm]?)\\[{}]/,
+    message:
+      "delimiter command followed by \\{ or \\} — fragile across renderers. " +
+      "Use \\lbrace / \\rbrace instead (e.g. \\big\\lbrace ... \\big\\rbrace).",
+  },
+  {
     // `\\` followed by `[` starts an OPTIONAL spacing argument `\\[dimen]`. That is fine
     // when the bracket holds a real dimension (`\\[4pt]`), but a `cases`/`aligned` row
     // whose first cell is a bracketed expression — `\\ [-1, 1]` — is mis-parsed: the

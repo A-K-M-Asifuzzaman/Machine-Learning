@@ -164,7 +164,7 @@ Here is bagging's most elegant feature. Each point is out-of-bag for the ~37% of
 train on it. So you can evaluate each point using **only the trees that never saw it** — which is
 exactly the honest, held-out prediction a validation set gives you, at **zero extra cost**.
 
-$$\hat{y}_i^{\text{OOB}} = \text{aggregate}\big\{ \text{model}_b(\mathbf{x}_i) : i \notin \text{sample}_b \big\}$$
+$$\hat{y}_i^{\text{OOB}} = \text{aggregate}\big\lbrace \text{model}_b(\mathbf{x}_i) : i \notin \text{sample}_b \big\rbrace$$
 
 The OOB error, averaged over all points, is a nearly unbiased estimate of test error — comparable to
 $k$-fold cross-validation ([05.04](../../05-model-evaluation/04-cross-validation/)) but for **free**,
