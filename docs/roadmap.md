@@ -83,7 +83,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | Ch. | Topic | Theory | From scratch | Notebook | Exercises |
 |---|---|:--:|:--:|:--:|:--:|
 | 06.01 | Bagging | 🟢 | 🟢 | ⚪ | 🟢 |
-| 06.02 | Random forests | ⚪ | ⚪ | ⚪ | ⚪ |
+| 06.02 | Random forests | 🟢 | 🟢 | ⚪ | 🟢 |
 | 06.03 | Boosting theory & AdaBoost | ⚪ | ⚪ | ⚪ | ⚪ |
 | 06.04 | Gradient boosting | ⚪ | ⚪ | ⚪ | ⚪ |
 | 06.05 | XGBoost / LightGBM / CatBoost | ⚪ | ⚪ | ⚪ | ⚪ |
