@@ -93,7 +93,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 
 | Ch. | Topic | Theory | From scratch | Notebook | Exercises |
 |---|---|:--:|:--:|:--:|:--:|
-| 07.01 | Neural network basics | ⚪ | ⚪ | ⚪ | ⚪ |
+| 07.01 | Neural network basics | 🟢 | 🟢 | ⚪ | 🟢 |
 | 07.02 | Backpropagation | ⚪ | ⚪ | ⚪ | ⚪ |
 | 07.03 | Activations | ⚪ | ⚪ | ⚪ | ⚪ |
 | 07.04 | Loss functions | ⚪ | ⚪ | ⚪ | ⚪ |
