@@ -61,7 +61,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 04.02 | Hierarchical clustering | 🟢 | 🟢 | ⚪ | 🟢 |
 | 04.03 | Density clustering | 🟢 | 🟢 | ⚪ | 🟢 |
 | 04.04 | Gaussian mixtures & EM | 🟢 | 🟢 | ⚪ | 🟢 |
-| 04.05 | Spectral clustering | ⚪ | ⚪ | ⚪ | ⚪ |
+| 04.05 | Spectral clustering | 🟢 | 🟢 | ⚪ | 🟢 |
 | 04.06 | Linear dim. reduction | ⚪ | ⚪ | ⚪ | ⚪ |
 | 04.07 | Manifold learning | ⚪ | ⚪ | ⚪ | ⚪ |
 | 04.08 | Anomaly detection | ⚪ | ⚪ | ⚪ | ⚪ |
