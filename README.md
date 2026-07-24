@@ -399,10 +399,13 @@ for the live status of every chapter.
 - ✅ **[Part 3 — Classical Supervised Learning](03-supervised-learning/)** (9/9): linear &
   regularized regression, basis expansion, logistic regression, generative classifiers, k-NN, SVM,
   decision trees, perceptron.
+- ✅ **[Part 6 — Ensemble Methods](06-ensembles/)** (6/6): bagging, random forests, boosting &
+  AdaBoost, gradient boosting, XGBoost/LightGBM/CatBoost (second-order boosting, verified against the
+  real `xgboost` library), and stacking & blending.
 
 Every completed chapter has full theory, a self-verifying `from_scratch.py` (checked against
-scikit-learn / statsmodels / scipy to machine precision), exercises, and per-chapter citations.
-Every LaTeX expression is validated by [`tools/check_math.js`](tools/).
+scikit-learn / statsmodels / scipy / xgboost to machine precision), exercises, and per-chapter
+citations. Every LaTeX expression is validated by [`tools/check_math.js`](tools/).
 
 ---
 

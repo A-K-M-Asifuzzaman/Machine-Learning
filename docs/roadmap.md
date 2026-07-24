@@ -87,7 +87,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 06.03 | Boosting theory & AdaBoost | 🟢 | 🟢 | ⚪ | 🟢 |
 | 06.04 | Gradient boosting | 🟢 | 🟢 | ⚪ | 🟢 |
 | 06.05 | XGBoost / LightGBM / CatBoost | 🟢 | 🟢 | ⚪ | 🟢 |
-| 06.06 | Stacking & blending | ⚪ | ⚪ | ⚪ | ⚪ |
+| 06.06 | Stacking & blending | 🟢 | 🟢 | ⚪ | 🟢 |
 
 ## Part 7 — Deep learning foundations
 
