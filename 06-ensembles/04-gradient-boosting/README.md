@@ -244,8 +244,7 @@ The per-leaf line search $\min_\gamma \sum_{R_{jm}} L(y_i, F_{m-1} + \gamma)$ ha
 Friedman uses one Newton step, which gives the standard leaf value
 
 $$
-\gamma_{jm} = \frac{\sum_{\mathbf{x}_i \in R_{jm}} (y_i - p_i)}{\sum_{\mathbf{x}_i \in R_{jm}} p_i(1 - p_i)}
-= \frac{\sum r_i}{\sum p_i(1 - p_i)}.
+\gamma_{jm} = \frac{\sum_{\mathbf{x}_i \in R_{jm}} (y_i - p_i)}{\sum_{\mathbf{x}_i \in R_{jm}} p_i(1 - p_i)} = \frac{\sum r_i}{\sum p_i(1 - p_i)}.
 $$
 
 Numerator: sum of residuals (the gradient). Denominator: sum of $p(1-p)$ (the Hessian). This

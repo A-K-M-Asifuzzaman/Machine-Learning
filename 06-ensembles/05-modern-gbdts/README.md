@@ -68,9 +68,7 @@ At round $t$ we add one tree $f_t$ to the current model $F_{t-1}$. XGBoost write
 loss **plus an explicit complexity penalty** on the new tree:
 
 $$
-\mathcal{L}^{(t)} = \sum_{i=1}^{n} L\big(y_i,\, F_{t-1}(\mathbf{x}_i) + f_t(\mathbf{x}_i)\big) + \Omega(f_t),
-\qquad
-\Omega(f) = \gamma T + \tfrac12 \lambda \sum_{j=1}^{T} w_j^2 .
+\mathcal{L}^{(t)} = \sum_{i=1}^{n} L\big(y_i,\, F_{t-1}(\mathbf{x}_i) + f_t(\mathbf{x}_i)\big) + \Omega(f_t), \qquad \Omega(f) = \gamma T + \tfrac12 \lambda \sum_{j=1}^{T} w_j^2 .
 $$
 
 Here $T$ is the number of leaves, $w_j$ the weight (output value) in leaf $j$, $\gamma$ a penalty per
@@ -87,18 +85,13 @@ The loss $L(y_i, F_{t-1} + f_t)$ is awkward to minimize in $f_t$ for a general $
 it to **second order** in $f_t$ with a Taylor series around $F_{t-1}$:
 
 $$
-L\big(y_i, F_{t-1} + f_t(\mathbf{x}_i)\big) \approx
-L\big(y_i, F_{t-1}\big) + g_i\, f_t(\mathbf{x}_i) + \tfrac12 h_i\, f_t(\mathbf{x}_i)^2,
+L\big(y_i, F_{t-1} + f_t(\mathbf{x}_i)\big) \approx L\big(y_i, F_{t-1}\big) + g_i\, f_t(\mathbf{x}_i) + \tfrac12 h_i\, f_t(\mathbf{x}_i)^2,
 $$
 
 where
 
 $$
-g_i = \frac{\partial L(y_i, F)}{\partial F}\Big|_{F_{t-1}}
-\quad(\text{gradient}),
-\qquad
-h_i = \frac{\partial^2 L(y_i, F)}{\partial F^2}\Big|_{F_{t-1}}
-\quad(\text{Hessian}).
+g_i = \frac{\partial L(y_i, F)}{\partial F}\Big|_{F_{t-1}} \quad(\text{gradient}), \qquad h_i = \frac{\partial^2 L(y_i, F)}{\partial F^2}\Big|_{F_{t-1}} \quad(\text{Hessian}).
 $$
 
 Gradient boosting ([06.04](../04-gradient-boosting/)) uses only $g_i$ (first order); XGBoost adds
@@ -162,9 +155,7 @@ right children ($G_L, H_L$ and $G_R, H_R$, with $G = G_L + G_R$, $H = H_L + H_R$
 by
 
 $$
-\boxed{\;
-\mathrm{Gain} = \frac12\left[ \frac{G_L^2}{H_L + \lambda} + \frac{G_R^2}{H_R + \lambda} - \frac{(G_L + G_R)^2}{H_L + H_R + \lambda} \right] - \gamma
-\;}
+\boxed{\mathrm{Gain} = \frac12\left[ \frac{G_L^2}{H_L + \lambda} + \frac{G_R^2}{H_R + \lambda} - \frac{(G_L + G_R)^2}{H_L + H_R + \lambda} \right] - \gamma}
 $$
 
 Read it piece by piece. The first two terms are the children's quality; the third is the parent's

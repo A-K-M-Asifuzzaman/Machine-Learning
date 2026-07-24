@@ -63,11 +63,7 @@ the cross terms vanish because $\varepsilon$ is independent of $\hat f_D$ and be
 $\mathbb{E}_D[\hat f_D - \bar f] = 0$ by definition. What survives is three terms:
 
 $$
-\boxed{\;
-\mathrm{Err}(\mathbf{x}_0) = \underbrace{\sigma^2}_{\text{irreducible}}
-+ \underbrace{\big(\bar f(\mathbf{x}_0) - f(\mathbf{x}_0)\big)^2}_{\mathrm{Bias}^2}
-+ \underbrace{\mathbb{E}_D\big[(\hat f_D(\mathbf{x}_0) - \bar f(\mathbf{x}_0))^2\big]}_{\mathrm{Variance}}
-\;}
+\boxed{\mathrm{Err}(\mathbf{x}_0) = \underbrace{\sigma^2}_{\text{irreducible}} + \underbrace{\big(\bar f(\mathbf{x}_0) - f(\mathbf{x}_0)\big)^2}_{\mathrm{Bias}^2} + \underbrace{\mathbb{E}_D\big[(\hat f_D(\mathbf{x}_0) - \bar f(\mathbf{x}_0))^2\big]}_{\mathrm{Variance}}}
 $$
 
 - **Irreducible error $\sigma^2$** — the noise floor. No model can beat it; it is the label's own
@@ -182,8 +178,7 @@ anything about the infinite population?* You minimize **empirical risk** (averag
 training set) but care about **true risk** (expected loss on the population):
 
 $$
-\hat R(h) = \frac1n\sum_{i=1}^n L(h(\mathbf{x}_i), y_i), \qquad
-R(h) = \mathbb{E}_{(\mathbf{x},y)}\big[L(h(\mathbf{x}), y)\big].
+\hat R(h) = \frac1n\sum_{i=1}^n L(h(\mathbf{x}_i), y_i), \qquad R(h) = \mathbb{E}_{(\mathbf{x},y)}\big[L(h(\mathbf{x}), y)\big].
 $$
 
 Empirical risk minimization (ERM) picks the $h$ that minimizes $\hat R$. The **generalization gap**

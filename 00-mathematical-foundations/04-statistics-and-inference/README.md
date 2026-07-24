@@ -111,11 +111,8 @@ $$\mathrm{MSE}(\hat\theta) = \mathbb{E}[(\hat\theta-\theta)^{2}] = \mathrm{Bias}
 
 $$
 \begin{aligned}
-\mathbb{E}[(\hat\theta-\theta)^{2}]
-&= \mathbb{E}\big[\big((\hat\theta - \mathbb{E}[\hat\theta]) + (\mathbb{E}[\hat\theta]-\theta)\big)^{2}\big]\\
-&= \underbrace{\mathbb{E}[(\hat\theta-\mathbb{E}[\hat\theta])^{2}]}_{\text{variance}}
- + \underbrace{(\mathbb{E}[\hat\theta]-\theta)^{2}}_{\text{bias}^{2}}
- + 2\underbrace{(\mathbb{E}[\hat\theta]-\theta)\,\mathbb{E}[\hat\theta - \mathbb{E}[\hat\theta]]}_{=\ 0}
+\mathbb{E}[(\hat\theta-\theta)^{2}] &= \mathbb{E}\big[\big((\hat\theta - \mathbb{E}[\hat\theta]) + (\mathbb{E}[\hat\theta]-\theta)\big)^{2}\big]\\
+&= \underbrace{\mathbb{E}[(\hat\theta-\mathbb{E}[\hat\theta])^{2}]}_{\text{variance}} + \underbrace{(\mathbb{E}[\hat\theta]-\theta)^{2}}_{\text{bias}^{2}} + 2\underbrace{(\mathbb{E}[\hat\theta]-\theta)\,\mathbb{E}[\hat\theta - \mathbb{E}[\hat\theta]]}_{=\ 0}
 \end{aligned}
 $$
 

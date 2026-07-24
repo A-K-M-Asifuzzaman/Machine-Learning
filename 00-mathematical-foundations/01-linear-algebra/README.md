@@ -386,10 +386,8 @@ $$\mathbf{X}^{\top}(\mathbf{y} - \mathbf{X}\mathbf{w}) = \mathbf{0}
 $$
 \begin{aligned}
 J(\mathbf{w}) &= (\mathbf{y}-\mathbf{X}\mathbf{w})^{\top}(\mathbf{y}-\mathbf{X}\mathbf{w}) \\
-&= \mathbf{y}^{\top}\mathbf{y} - 2\mathbf{w}^{\top}\mathbf{X}^{\top}\mathbf{y}
-   + \mathbf{w}^{\top}\mathbf{X}^{\top}\mathbf{X}\mathbf{w} \\[4pt]
-\nabla_{\mathbf{w}} J &= -2\mathbf{X}^{\top}\mathbf{y} + 2\mathbf{X}^{\top}\mathbf{X}\mathbf{w}
-\;\overset{!}{=}\; \mathbf{0}
+&= \mathbf{y}^{\top}\mathbf{y} - 2\mathbf{w}^{\top}\mathbf{X}^{\top}\mathbf{y} + \mathbf{w}^{\top}\mathbf{X}^{\top}\mathbf{X}\mathbf{w} \\[4pt]
+\nabla_{\mathbf{w}} J &= -2\mathbf{X}^{\top}\mathbf{y} + 2\mathbf{X}^{\top}\mathbf{X}\mathbf{w} \;\overset{!}{=}\; \mathbf{0}
 \end{aligned}
 $$
 

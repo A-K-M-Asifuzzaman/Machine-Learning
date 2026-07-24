@@ -47,8 +47,7 @@ the wrong yardstick, which no amount of modelling can fix.
 **Mean squared error** and its root:
 
 $$
-\mathrm{MSE} = \frac1n\sum_{i=1}^n (y_i - \hat y_i)^2, \qquad
-\mathrm{RMSE} = \sqrt{\mathrm{MSE}}.
+\mathrm{MSE} = \frac1n\sum_{i=1}^n (y_i - \hat y_i)^2, \qquad \mathrm{RMSE} = \sqrt{\mathrm{MSE}}.
 $$
 
 - **Squares the error**, so a prediction off by 10 counts 100× a prediction off by 1. MSE is
@@ -111,8 +110,7 @@ the estimator in the table, to numerical precision.
 The **coefficient of determination** rescales MSE against a baseline:
 
 $$
-R^2 = 1 - \frac{\sum_i (y_i - \hat y_i)^2}{\sum_i (y_i - \bar y)^2}
-= 1 - \frac{\mathrm{SS}_{\text{res}}}{\mathrm{SS}_{\text{tot}}}.
+R^2 = 1 - \frac{\sum_i (y_i - \hat y_i)^2}{\sum_i (y_i - \bar y)^2} = 1 - \frac{\mathrm{SS}_{\text{res}}}{\mathrm{SS}_{\text{tot}}}.
 $$
 
 - The baseline is the **mean predictor** $\bar y$: $R^2$ is the fraction of the target's variance the
@@ -140,8 +138,7 @@ When errors should be judged **relative** to the target's size (a 10-unit miss m
 20-unit item than on a 2000-unit one), percentage metrics are tempting:
 
 $$
-\mathrm{MAPE} = \frac{100}{n}\sum_i \left|\frac{y_i - \hat y_i}{y_i}\right|, \qquad
-\mathrm{sMAPE} = \frac{100}{n}\sum_i \frac{|y_i - \hat y_i|}{(|y_i| + |\hat y_i|)/2}.
+\mathrm{MAPE} = \frac{100}{n}\sum_i \left|\frac{y_i - \hat y_i}{y_i}\right|, \qquad \mathrm{sMAPE} = \frac{100}{n}\sum_i \frac{|y_i - \hat y_i|}{(|y_i| + |\hat y_i|)/2}.
 $$
 
 They are scale-independent and intuitive ("we're off by 8% on average"), but carry sharp traps:
