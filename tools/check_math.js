@@ -162,9 +162,18 @@ function walk(dir, out = []) {
 
 // ---------------------------------------------------------------------------
 
+function collect(target) {
+  // Accept either a directory (walked recursively) or a single .md file, so the tool can
+  // be pointed at one chapter or one file as easily as the whole repo.
+  const stat = fs.statSync(target);
+  if (stat.isDirectory()) return walk(target).sort();
+  if (target.endsWith(".md")) return [target];
+  return [];
+}
+
 function main() {
   const root = process.argv[2] || ".";
-  const files = walk(root).sort();
+  const files = collect(root).sort();
 
   let totalExpressions = 0;
   let totalProblems = 0;
