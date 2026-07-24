@@ -745,7 +745,7 @@ $$f(\mathbf{y}) \ge f(\mathbf{x}) + \mathbf{g}^{\top}(\mathbf{y}-\mathbf{x})\qua
 i.e. any global underestimating hyperplane (compare §6.2's first-order condition). The set of all
 subgradients is the **subdifferential** $\partial f(\mathbf{x})$. For $f(w) = |w|$:
 
-$$\partial f(w) = \begin{cases}\{+1\} & w > 0\\ [-1, 1] & w = 0\\ \{-1\} & w < 0\end{cases}$$
+$$\partial f(w) = \begin{cases}\{+1\} & w > 0\\ {[-1, 1]} & w = 0\\ \{-1\} & w < 0\end{cases}$$
 
 The interval at zero is what allows a coefficient to *stay* at exactly zero: the objective's
 subdifferential can contain 0 over a whole range of data configurations. That is the analytic

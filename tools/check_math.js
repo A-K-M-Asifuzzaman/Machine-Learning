@@ -44,6 +44,18 @@ const MARKDOWN_HAZARDS = [
     pattern: /\\(emph|textsc|mbox|includegraphics|newcommand|renewcommand|def)\b/,
     message: "LaTeX command with no KaTeX equivalent.",
   },
+  {
+    // `\\` followed by `[` starts an OPTIONAL spacing argument `\\[dimen]`. That is fine
+    // when the bracket holds a real dimension (`\\[4pt]`), but a `cases`/`aligned` row
+    // whose first cell is a bracketed expression — `\\ [-1, 1]` — is mis-parsed: the
+    // renderer tries to read `-1, 1` as a length, fails, and the row structure collapses
+    // into "Extra close brace / missing open brace". KaTeX is lenient about it; MathJax
+    // and stricter renderers are not. Brace the cell: `\\ {[-1, 1]}`.
+    pattern: /\\\\\s*\[(?![0-9.\s]*(pt|px|em|ex|mu|cm|mm|in|bp|pc|dd|cc|sp|ex|em)\])/,
+    message:
+      "\\\\ followed by [ that is not a spacing dimension — a cases/aligned row " +
+      "starting with a bracket is mis-parsed as \\\\[dimen]. Brace it: \\\\ {[...]}.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
