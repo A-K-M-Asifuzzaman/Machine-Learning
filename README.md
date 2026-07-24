@@ -391,6 +391,19 @@ detail are in [`docs/references.md`](docs/references.md). The backbone:
 This repository is built in public, chapter by chapter. See [`docs/roadmap.md`](docs/roadmap.md)
 for the live status of every chapter.
 
+**Complete so far:**
+
+- ✅ **[Part 0 — Mathematical Foundations](00-mathematical-foundations/)** (6/6): linear algebra,
+  calculus & optimization, probability, statistics & inference, information theory, numerical
+  methods.
+- ✅ **[Part 3 — Classical Supervised Learning](03-supervised-learning/)** (9/9): linear &
+  regularized regression, basis expansion, logistic regression, generative classifiers, k-NN, SVM,
+  decision trees, perceptron.
+
+Every completed chapter has full theory, a self-verifying `from_scratch.py` (checked against
+scikit-learn / statsmodels / scipy to machine precision), exercises, and per-chapter citations.
+Every LaTeX expression is validated by [`tools/check_math.js`](tools/).
+
 ---
 
 ## License

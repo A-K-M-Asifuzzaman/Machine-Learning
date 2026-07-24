@@ -51,7 +51,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 03.06 | k-Nearest Neighbours | 🟢 | 🟢 | ⚪ | 🟢 |
 | 03.07 | Support vector machines | 🟢 | 🟢 | ⚪ | 🟢 |
 | 03.08 | Decision trees | 🟢 | 🟢 | ⚪ | 🟢 |
-| 03.09 | Perceptron | ⚪ | ⚪ | ⚪ | ⚪ |
+| 03.09 | Perceptron | 🟢 | 🟢 | ⚪ | 🟢 |
 
 ## Part 4 — Unsupervised learning
 
