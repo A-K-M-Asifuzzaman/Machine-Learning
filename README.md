@@ -399,6 +399,9 @@ for the live status of every chapter.
 - ✅ **[Part 3 — Classical Supervised Learning](03-supervised-learning/)** (9/9): linear &
   regularized regression, basis expansion, logistic regression, generative classifiers, k-NN, SVM,
   decision trees, perceptron.
+- ✅ **[Part 5 — Evaluation & Model Selection](05-model-evaluation/)** (6/6): bias-variance & learning
+  theory (VC bounds, double descent), regression & classification metrics, cross-validation (leakage,
+  nested CV), hyperparameter optimization (random/Bayesian/Hyperband), and calibration.
 - ✅ **[Part 6 — Ensemble Methods](06-ensembles/)** (6/6): bagging, random forests, boosting &
   AdaBoost, gradient boosting, XGBoost/LightGBM/CatBoost (second-order boosting, verified against the
   real `xgboost` library), and stacking & blending.

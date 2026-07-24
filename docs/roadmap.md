@@ -76,7 +76,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 05.03 | Classification metrics | 🟢 | 🟢 | ⚪ | 🟢 |
 | 05.04 | Cross-validation | 🟢 | 🟢 | ⚪ | 🟢 |
 | 05.05 | Hyperparameter optimization | 🟢 | 🟢 | ⚪ | 🟢 |
-| 05.06 | Calibration | ⚪ | ⚪ | ⚪ | ⚪ |
+| 05.06 | Calibration | 🟢 | 🟢 | ⚪ | 🟢 |
 
 ## Part 6 — Ensembles
 
