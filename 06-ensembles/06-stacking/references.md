@@ -73,7 +73,7 @@ combiners and on ensemble **diversity** (§7) — how to measure it and why it m
 
 ## Deferred to later chapters
 
-- **Cross-validation and model selection in depth** → [05.03](../../05-model-evaluation/03-validation-and-model-selection/)
+- **Cross-validation and model selection in depth** → [05.04](../../05-model-evaluation/04-cross-validation/)
 - **Data leakage — the general problem stacking must avoid** → [02.xx data leakage]
 - **Calibrating stacked probabilities** → [05.06](../../05-model-evaluation/06-calibration/)
 - **Bayesian model averaging — the probabilistic cousin** → [12.xx / 05.xx]

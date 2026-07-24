@@ -1,7 +1,7 @@
 # 06.06 — Stacking & Blending
 
 > **Prerequisites**: [06.01](../01-bagging/)–[06.05](../05-modern-gbdts/) (the ensembles stacking
-> combines), [05.03](../../05-model-evaluation/03-validation-and-model-selection/) (cross-validation —
+> combines), [05.04](../../05-model-evaluation/04-cross-validation/) (cross-validation —
 > stacking is built on out-of-fold prediction), [03.01](../../03-supervised-learning/01-linear-regression/)–[03.02](../../03-supervised-learning/02-logistic-regression/)
 > (the usual meta-learner).
 > **You will be able to**: build a stacked ensemble with leakage-free out-of-fold meta-features,
@@ -84,7 +84,7 @@ to build the feature that predicts it. Experiment 1 reproduces the collapse.
 ## 3. Out-of-fold predictions — the fix
 
 The cure is to generate every meta-feature from a model that **did not see that row during
-training**, using cross-validation ([05.03](../../05-model-evaluation/03-validation-and-model-selection/)):
+training**, using cross-validation ([05.04](../../05-model-evaluation/04-cross-validation/)):
 
 Split the training data into $K$ folds. For a given base model and a given fold $k$, train the model
 on the *other* $K-1$ folds and predict the held-out fold $k$. Do this for every fold; concatenating

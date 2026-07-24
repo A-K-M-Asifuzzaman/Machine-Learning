@@ -77,7 +77,7 @@ additive-model framing.
   → [06.05](../05-modern-gbdts/) (the gradient/Hessian leaf of §6 becomes the whole objective)
 - **Stacking — a different way to combine models** → [06.06](../06-stacking/)
 - **The bias-variance decomposition — why boosting attacks bias** → [05.01](../../05-model-evaluation/01-bias-variance-and-theory/)
-- **Early stopping and validation curves in general** → [05.03](../../05-model-evaluation/03-validation-and-model-selection/)
+- **Early stopping and validation curves in general** → [05.04](../../05-model-evaluation/04-cross-validation/)
 - **Calibrating a boosted classifier's probabilities** → [05.06](../../05-model-evaluation/06-calibration/)
 - **Partial dependence and feature importance done honestly** → [17.02](../../17-explainable-ai/02-post-hoc/)
 - **Quantile regression in full** → [15.xx time series / probabilistic forecasting]
