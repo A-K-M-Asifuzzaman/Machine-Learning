@@ -65,7 +65,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 04.06 | Linear dim. reduction | 🟢 | 🟢 | ⚪ | 🟢 |
 | 04.07 | Manifold learning | 🟢 | 🟢 | ⚪ | 🟢 |
 | 04.08 | Anomaly detection | 🟢 | 🟢 | ⚪ | 🟢 |
-| 04.09 | Association rules | ⚪ | ⚪ | ⚪ | ⚪ |
+| 04.09 | Association rules | 🟢 | 🟢 | ⚪ | 🟢 |
 
 ## Part 5 — Evaluation & model selection
 

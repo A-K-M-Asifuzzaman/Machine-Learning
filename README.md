@@ -399,6 +399,9 @@ for the live status of every chapter.
 - ✅ **[Part 3 — Classical Supervised Learning](03-supervised-learning/)** (9/9): linear &
   regularized regression, basis expansion, logistic regression, generative classifiers, k-NN, SVM,
   decision trees, perceptron.
+- ✅ **[Part 4 — Unsupervised Learning](04-unsupervised-learning/)** (9/9): k-means, hierarchical,
+  DBSCAN, Gaussian mixtures & EM, spectral clustering, PCA, manifold learning (Isomap/t-SNE), anomaly
+  detection (Isolation Forest/LOF), and association rules (Apriori).
 - ✅ **[Part 5 — Evaluation & Model Selection](05-model-evaluation/)** (6/6): bias-variance & learning
   theory (VC bounds, double descent), regression & classification metrics, cross-validation (leakage,
   nested CV), hyperparameter optimization (random/Bayesian/Hyperband), and calibration.
