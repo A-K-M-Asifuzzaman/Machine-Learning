@@ -73,7 +73,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 |---|---|:--:|:--:|:--:|:--:|
 | 05.01 | Bias-variance & learning theory | 🟢 | 🟢 | ⚪ | 🟢 |
 | 05.02 | Regression metrics | 🟢 | 🟢 | ⚪ | 🟢 |
-| 05.03 | Classification metrics | ⚪ | ⚪ | ⚪ | ⚪ |
+| 05.03 | Classification metrics | 🟢 | 🟢 | ⚪ | 🟢 |
 | 05.04 | Cross-validation | ⚪ | ⚪ | ⚪ | ⚪ |
 | 05.05 | Hyperparameter optimization | ⚪ | ⚪ | ⚪ | ⚪ |
 | 05.06 | Calibration | ⚪ | ⚪ | ⚪ | ⚪ |
