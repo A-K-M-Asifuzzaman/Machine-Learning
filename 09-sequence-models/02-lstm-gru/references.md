@@ -62,4 +62,4 @@ Exact sources used, so every claim in this chapter can be traced and checked.
 - **The vanishing-gradient problem these cells solve** → [09.01](../01-rnn/)
 - **Seq2seq and attention** → [09.03](../03-seq2seq-and-attention/)
 - **Residual connections (the same gradient-path idea for depth)** → [08.02](../../08-computer-vision/02-cnn-architectures/)
-- **Transformers** → [Part 11](../../11-transformers-llms/)
+- **Transformers** → [Part 11](../../11-transformers-and-llms/)

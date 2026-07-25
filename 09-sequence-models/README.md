@@ -33,7 +33,7 @@ computation many steps later, and does its gradient survive the trip?*
    depth ([08.02 §4](../08-computer-vision/02-cnn-architectures/)).
 3. **Eventually the recurrence itself is the bottleneck.** Once attention can read any position
    directly, the sequential RNN is doing little — and it prevents parallelism. Dropping it is the
-   transformer ([09.03 §7](03-seq2seq-and-attention/), [Part 11](../11-transformers-llms/)).
+   transformer ([09.03 §7](03-seq2seq-and-attention/), [Part 11](../11-transformers-and-llms/)).
 
 ## Chapters
 
@@ -75,8 +75,8 @@ flowchart TD
 
 ## Where this leads
 
-- **Transformers — attention without recurrence** → [Part 11](../11-transformers-llms/)
+- **Transformers — attention without recurrence** → [Part 11](../11-transformers-and-llms/)
 - **The deep-learning foundations underneath** → [Part 7](../07-deep-learning/)
 - **NLP tasks these models solve** → [Part 10](../10-nlp/)
-- **Positional encodings and self-attention** → [08.05](../08-computer-vision/05-vision-transformers/), [11.01](../11-transformers-llms/01-attention/)
+- **Positional encodings and self-attention** → [08.05](../08-computer-vision/05-vision-transformers/), [11.01](../11-transformers-and-llms/01-transformer/)
 - **Time-series forecasting with sequence models** → [Part 15](../15-time-series/)

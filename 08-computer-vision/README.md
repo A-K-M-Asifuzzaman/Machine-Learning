@@ -9,7 +9,7 @@
 Images are high-dimensional and structured: nearby pixels are related, and an object means the same
 thing wherever it appears. Part 8 is about architectures that exploit that structure. It builds on the
 [deep-learning foundations](../07-deep-learning/) (backprop, normalization, residuals) and leads into
-the [transformer](../11-transformers-llms/) track.
+the [transformer](../11-transformers-and-llms/) track.
 
 ## The unifying question — what is the right inductive bias?
 
@@ -79,7 +79,7 @@ flowchart TD
 ## Where this leads
 
 - **The deep-learning foundations underneath** → [Part 7](../07-deep-learning/)
-- **Attention and the transformer block in full** → [Part 11](../11-transformers-llms/)
+- **Attention and the transformer block in full** → [Part 11](../11-transformers-and-llms/)
 - **Sequence models (the other half of the architecture zoo)** → [Part 9](../09-sequence-models/)
 - **Generative vision (diffusion, GANs, text-to-image)** → [Part 12](../12-generative-models/)
 - **Explaining vision models (Grad-CAM, saliency)** → [Part 17](../17-explainable-ai/)

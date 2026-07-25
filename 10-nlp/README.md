@@ -4,7 +4,7 @@
 > vector.** Words are discrete, order matters, meaning is contextual, and the vocabulary is unbounded.
 > This part walks the representational ladder: from *counting* words (bag-of-words), to *learning* dense
 > word vectors (embeddings), to the *subword* tokenization and *task metrics* that the transformer era
-> ([Part 11](../11-transformers-llms/)) is built on. Every representation is built from scratch and
+> ([Part 11](../11-transformers-and-llms/)) is built on. Every representation is built from scratch and
 > verified against scikit-learn, tiktoken, or nltk.
 
 Classical ML ([Part 3](../03-supervised-learning/)) needs numeric features; images have pixels
@@ -75,7 +75,7 @@ flowchart TD
 
 ## Where this leads
 
-- **Transformers & LLMs — contextual embeddings, the current paradigm** → [Part 11](../11-transformers-llms/)
+- **Transformers & LLMs — contextual embeddings, the current paradigm** → [Part 11](../11-transformers-and-llms/)
 - **The sequence models NLP was built on** → [Part 9](../09-sequence-models/)
 - **Classification metrics in general** → [05.03](../05-model-evaluation/03-classification-metrics/)
 - **Text-conditioned generation** → [Part 12](../12-generative-models/)

@@ -133,7 +133,7 @@ Word2Vec/GloVe/FastText produce **one vector per word** — a *static* embedding
 **polysemy**. "Bank" (river) and "bank" (money) get a single averaged vector, and "play" is the same in
 "play a game" and "a Shakespeare play". The fix is **contextual embeddings**: run the sentence through a
 model so each token's vector *depends on its context*. ELMo (2018) did this with bidirectional LSTMs
-([09.02](../../09-sequence-models/02-lstm-gru/)); BERT and GPT ([Part 11](../../11-transformers-llms/))
+([09.02](../../09-sequence-models/02-lstm-gru/)); BERT and GPT ([Part 11](../../11-transformers-and-llms/))
 did it with transformers, and contextual embeddings now dominate. Static embeddings remain useful as
 lightweight features and as the **input embedding layer** of every transformer.
 
@@ -168,7 +168,7 @@ encodes social bias as directions.
 
 ## Where this leads
 
-- **Contextual embeddings from transformers (the fix for polysemy)** → [Part 11](../../11-transformers-llms/)
+- **Contextual embeddings from transformers (the fix for polysemy)** → [Part 11](../../11-transformers-and-llms/)
 - **The tokenization that feeds embeddings** → [10.01](../01-text-preprocessing/)
 - **Count-based representations embeddings improve on** → [10.02](../02-classical-representations/)
 - **The SGNS objective's cousin — contrastive learning** → [08.05](../../08-computer-vision/05-vision-transformers/)

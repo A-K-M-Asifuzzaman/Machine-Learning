@@ -113,7 +113,7 @@ was invented for exactly this (RetinaNet).
   low-resolution and shallow features are semantically weak. FPN builds a **top-down pyramid** with
   lateral connections so every scale has strong features. It is a near-universal detection neck.
 - **DETR (Detection Transformer, 2020)** — casts detection as **set prediction**: a transformer
-  ([11.02](../../11-transformers-llms/02-transformer-architecture/)) attends over the image and
+  ([11.01](../../11-transformers-and-llms/01-transformer/)) attends over the image and
   outputs a fixed set of boxes, matched to ground truth by the Hungarian algorithm. **No anchors, no
   NMS** — the model learns to emit one box per object directly. This removed two hand-designed
   components (anchors and NMS) and reframed detection as a sequence problem.
@@ -190,6 +190,6 @@ mostly-background image** where predicting "all background" scores 99% accuracy 
 
 - **The backbones underneath detectors** → [08.02](../02-cnn-architectures/)
 - **Focal loss for one-stage class imbalance** → [07.04](../../07-deep-learning/04-loss-functions/)
-- **The transformer DETR is built on** → [11.02](../../11-transformers-llms/02-transformer-architecture/)
+- **The transformer DETR is built on** → [11.01](../../11-transformers-and-llms/01-transformer/)
 - **Vision transformers as detection backbones** → [08.05](../05-vision-transformers/)
 - **Precision, recall, and the PR curve in general** → [05.03](../../05-model-evaluation/03-classification-metrics/)

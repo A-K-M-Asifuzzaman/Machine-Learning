@@ -24,7 +24,7 @@ Exact sources used, so every claim in this chapter can be traced and checked.
   <https://arxiv.org/abs/2010.11929>.
 - **Vaswani, A. et al. (2017).** "Attention Is All You Need." *NeurIPS*. — the transformer and the
   permutation-equivariance / positional-encoding argument (§3-§4). Free at
-  <https://arxiv.org/abs/1706.03762>. (Full treatment in [11.01](../../11-transformers-llms/01-attention/).)
+  <https://arxiv.org/abs/1706.03762>. (Full treatment in [11.01](../../11-transformers-and-llms/01-transformer/).)
 
 ## Data efficiency and architecture
 
@@ -65,7 +65,7 @@ Exact sources used, so every claim in this chapter can be traced and checked.
 
 ## Deferred to later chapters
 
-- **Attention and the transformer block in full** → [11.01](../../11-transformers-llms/01-attention/), [11.02](../../11-transformers-llms/02-transformer-architecture/)
+- **Attention and the transformer block in full** → [11.01](../../11-transformers-and-llms/01-transformer/), [11.01](../../11-transformers-and-llms/01-transformer/)
 - **CNNs, the prior ViT drops** → [08.02](../02-cnn-architectures/)
-- **Transfer and self-supervised pretraining** → [08.03](../03-transfer-learning/), [11.05](../../11-transformers-llms/05-pretraining-scaling/)
+- **Transfer and self-supervised pretraining** → [08.03](../03-transfer-learning/), [11.02](../../11-transformers-and-llms/02-pretraining/)
 - **Text-to-image generation (CLIP-guided)** → [Part 12](../../12-generative-models/)

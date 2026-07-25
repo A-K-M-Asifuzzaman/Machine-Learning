@@ -146,7 +146,7 @@ The same cell wires up for different tasks:
   readily and can produce unbounded states; they need careful initialization (IRNN).
 - **"BPTT is a different algorithm."** It is plain backprop on the unrolled graph — the only twist is
   summing the shared-weight gradient over steps (§3).
-- **"RNNs are obsolete."** Transformers ([Part 11](../../11-transformers-llms/)) dominate NLP, but RNNs
+- **"RNNs are obsolete."** Transformers ([Part 11](../../11-transformers-and-llms/)) dominate NLP, but RNNs
   remain useful for streaming, low-latency, and small-footprint settings, and the gradient-flow lessons
   here underpin all of them.
 
@@ -167,4 +167,4 @@ The same cell wires up for different tasks:
 - **Seq2seq and attention — and why attention replaced recurrence** → [09.03](../03-seq2seq-and-attention/)
 - **The same gradient-flow fix for depth (residuals)** → [08.02 §4](../../08-computer-vision/02-cnn-architectures/)
 - **Backprop, the general algorithm BPTT specializes** → [07.02](../../07-deep-learning/02-backpropagation/)
-- **Transformers — sequence modeling without recurrence** → [Part 11](../../11-transformers-llms/)
+- **Transformers — sequence modeling without recurrence** → [Part 11](../../11-transformers-and-llms/)

@@ -142,7 +142,7 @@ start by remembering, and let training decide what to forget. The gate makes the
   [09.01](../01-rnn/).
 - **Peephole / variants** exist (connect $c_t$ to the gates) but rarely matter.
 - **They still process sequentially.** No parallelism across time — the limitation transformers remove
-  ([Part 11](../../11-transformers-llms/)).
+  ([Part 11](../../11-transformers-and-llms/)).
 
 ## 8. Common misconceptions
 
@@ -174,4 +174,4 @@ start by remembering, and let training decide what to forget. The gate makes the
 - **The vanishing-gradient problem these cells solve** → [09.01](../01-rnn/)
 - **Seq2seq, attention, and why attention replaced recurrence** → [09.03](../03-seq2seq-and-attention/)
 - **The same additive-path idea for depth (residuals)** → [08.02 §4](../../08-computer-vision/02-cnn-architectures/)
-- **Transformers — sequence modeling without recurrence** → [Part 11](../../11-transformers-llms/)
+- **Transformers — sequence modeling without recurrence** → [Part 11](../../11-transformers-and-llms/)

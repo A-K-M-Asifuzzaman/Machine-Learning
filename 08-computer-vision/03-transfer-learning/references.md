@@ -75,6 +75,6 @@ Exact sources used, so every claim in this chapter can be traced and checked.
 
 - **The backbones being transferred** → [08.02](../02-cnn-architectures/)
 - **Self-supervised pretraining (DINO, MAE, CLIP)** → [08.05](../05-vision-transformers/)
-- **Pretrain-then-fine-tune for language / LLMs** → [11.05](../../11-transformers-llms/05-pretraining-scaling/)
+- **Pretrain-then-fine-tune for language / LLMs** → [11.02](../../11-transformers-and-llms/02-pretraining/)
 - **Learning-rate schedules and warmup** → [07.06](../../07-deep-learning/06-optimizers/)
 - **Distribution shift and robustness** → [18.xx]

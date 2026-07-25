@@ -168,7 +168,7 @@ domain shift is its own field (**domain adaptation**), deferred to [18.xx].
 - **"More target data always means fine-tune everything."** Roughly yes, but early layers are generic
   enough that freezing them costs little and saves compute.
 - **"Transfer learning is only for images."** The same logic drives NLP and LLMs — pretrain on a huge
-  corpus, fine-tune on the task ([11.05](../../11-transformers-llms/05-pretraining-scaling/)). It is
+  corpus, fine-tune on the task ([11.02](../../11-transformers-and-llms/02-pretraining/)). It is
   the dominant paradigm across all of deep learning.
 
 ## What's in this chapter
@@ -187,6 +187,6 @@ domain shift is its own field (**domain adaptation**), deferred to [18.xx].
 - **The backbones you transfer from** → [08.02](../02-cnn-architectures/)
 - **The features being reused** → [08.01](../01-convolution/)
 - **Learning-rate schedules for fine-tuning** → [07.06](../../07-deep-learning/06-optimizers/)
-- **Pretraining + fine-tuning for language (the same paradigm)** → [11.05](../../11-transformers-llms/05-pretraining-scaling/)
+- **Pretraining + fine-tuning for language (the same paradigm)** → [11.02](../../11-transformers-and-llms/02-pretraining/)
 - **Self-supervised pretraining without labels (DINO, MAE, CLIP)** → [08.05](../05-vision-transformers/)
 - **Domain adaptation and distribution shift** → [18.xx], [05.xx]

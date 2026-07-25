@@ -221,4 +221,4 @@ precision is the real proof that the im2col/col2im pair are correct adjoints.
 - **Transfer learning — reusing the learned filters** → [08.03](../03-transfer-learning/)
 - **Backprop, the chain rule this chapter specializes** → [07.02](../../07-deep-learning/02-backpropagation/)
 - **Normalization and initialization for deep conv stacks** → [07.05](../../07-deep-learning/05-initialization/), [07.07](../../07-deep-learning/07-normalization/)
-- **Attention as an alternative to convolution's inductive bias** → [08.05](../05-vision-transformers/), [11.01](../../11-transformers-llms/01-attention/)
+- **Attention as an alternative to convolution's inductive bias** → [08.05](../05-vision-transformers/), [11.01](../../11-transformers-and-llms/01-transformer/)

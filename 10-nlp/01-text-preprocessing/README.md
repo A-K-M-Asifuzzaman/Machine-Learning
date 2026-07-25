@@ -8,7 +8,7 @@
 > BPE from scratch and measures the trade-off it resolves.
 
 Everything downstream — embeddings ([10.03](../03-word-embeddings/)), transformers
-([Part 11](../../11-transformers-llms/)) — operates on token IDs. Tokenization decides what the model
+([Part 11](../../11-transformers-and-llms/)) — operates on token IDs. Tokenization decides what the model
 *can* represent and how long its sequences are, so it is the quiet foundation of all of NLP.
 
 ## Table of contents
@@ -173,6 +173,6 @@ measured in tokens, and a rough rule is **~4 characters ≈ 1 token** for Englis
 
 - **Classical representations built on tokens (BoW, TF-IDF)** → [10.02](../02-classical-representations/)
 - **Turning tokens into vectors (embeddings)** → [10.03](../03-word-embeddings/)
-- **The transformers that consume tokens** → [Part 11](../../11-transformers-llms/)
+- **The transformers that consume tokens** → [Part 11](../../11-transformers-and-llms/)
 - **The long-sequence cost that motivates subwords** → [09.01](../../09-sequence-models/01-rnn/)
 - **NLP tasks and their metrics** → [10.04](../04-nlp-tasks/)

@@ -59,5 +59,5 @@ Exact sources used, so every claim in this chapter can be traced and checked.
 
 - **Classical representations over tokens (BoW, TF-IDF)** → [10.02](../02-classical-representations/)
 - **Embeddings — tokens to vectors** → [10.03](../03-word-embeddings/)
-- **Transformers that consume tokens** → [Part 11](../../11-transformers-llms/)
+- **Transformers that consume tokens** → [Part 11](../../11-transformers-and-llms/)
 - **Sequence length and cost** → [09.01](../../09-sequence-models/01-rnn/), [08.05](../../08-computer-vision/05-vision-transformers/)

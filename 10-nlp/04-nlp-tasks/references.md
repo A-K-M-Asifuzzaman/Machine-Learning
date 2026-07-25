@@ -67,7 +67,7 @@ Exact sources used, so every claim in this chapter can be traced and checked.
 
 ## Deferred to later chapters
 
-- **The transformers solving these tasks** → [Part 11](../../11-transformers-llms/)
+- **The transformers solving these tasks** → [Part 11](../../11-transformers-and-llms/)
 - **General classification metrics** → [05.03](../../05-model-evaluation/03-classification-metrics/)
-- **Decoding for generation** → [11.06](../../11-transformers-llms/06-decoding-generation/)
-- **LLM evaluation and safety** → [11.08](../../11-transformers-llms/08-evaluation-safety/)
+- **Decoding for generation** → [11.07](../../11-transformers-and-llms/07-inference/)
+- **LLM evaluation and safety** → [11.08](../../11-transformers-and-llms/08-rag-and-agents/)

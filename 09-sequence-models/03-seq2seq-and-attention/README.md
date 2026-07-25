@@ -73,7 +73,7 @@ blend. Two scoring functions dominate (Experiment 1 confirms both give valid dis
 | **Dot / multiplicative (Luong)** | $q_i^\top k_j$ (optionally $q_i^\top W k_j$) | cheap; what transformers use |
 
 The whole operation is differentiable, so the model **learns what to attend to** end-to-end. This is
-the query–key–value pattern that [self-attention](../../11-transformers-llms/01-attention/) generalizes.
+the query–key–value pattern that [self-attention](../../11-transformers-and-llms/01-transformer/) generalizes.
 
 ## 4. Attention is alignment
 
@@ -104,7 +104,7 @@ std $\approx 5.6$):
 
 Dividing by $\sqrt{d}$ keeps the scores $O(1)$, the attention **soft** (entropy 2.6 of 3), and the
 gradients healthy. This is exactly the $1/\sqrt{d}$ in the transformer's **scaled dot-product
-attention** ([11.01](../../11-transformers-llms/01-attention/)) — not a detail but a fix for a real
+attention** ([11.01](../../11-transformers-and-llms/01-transformer/)) — not a detail but a fix for a real
 gradient problem. (Hard attention — sampling one position — exists but is non-differentiable and
 trained with REINFORCE.)
 
@@ -141,7 +141,7 @@ replacement:
 positional encodings ([08.05 §4](../../08-computer-vision/05-vision-transformers/)) since attention is
 order-agnostic ([08.05 §3](../../08-computer-vision/05-vision-transformers/)). Everything in this
 chapter — scoring, the softmax weights, $1/\sqrt{d}$, the alignment view — is a direct ancestor of the
-transformer ([Part 11](../../11-transformers-llms/)).
+transformer ([Part 11](../../11-transformers-and-llms/)).
 
 ## 8. Common misconceptions
 
@@ -170,8 +170,8 @@ transformer ([Part 11](../../11-transformers-llms/)).
 
 ## Where this leads
 
-- **Self-attention and the full transformer** → [11.01](../../11-transformers-llms/01-attention/), [11.02](../../11-transformers-llms/02-transformer-architecture/)
+- **Self-attention and the full transformer** → [11.01](../../11-transformers-and-llms/01-transformer/), [11.01](../../11-transformers-and-llms/01-transformer/)
 - **The RNNs attention was bolted onto** → [09.01](../01-rnn/), [09.02](../02-lstm-gru/)
 - **Positional encodings (attention is order-agnostic)** → [08.05](../../08-computer-vision/05-vision-transformers/)
-- **Decoding strategies for LLMs (sampling, top-k, nucleus)** → [11.06](../../11-transformers-llms/06-decoding-generation/)
+- **Decoding strategies for LLMs (sampling, top-k, nucleus)** → [11.07](../../11-transformers-and-llms/07-inference/)
 - **NLP tasks these models solve** → [Part 10](../../10-nlp/)

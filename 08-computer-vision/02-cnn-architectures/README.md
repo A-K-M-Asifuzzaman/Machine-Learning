@@ -101,7 +101,7 @@ $$
 The gradient can never fully vanish because the identity term passes it straight through. In the
 measurement the residual gradient stays $\geq O(1)$ even at 100 layers. This is what made 100- and
 1000-layer networks trainable; residual connections are now in essentially every deep architecture,
-including transformers ([11.02](../../11-transformers-llms/02-transformer-architecture/)). Real ResNets
+including transformers ([11.01](../../11-transformers-and-llms/01-transformer/)). Real ResNets
 also add **BatchNorm** ([07.07](../../07-deep-learning/07-normalization/)) inside the block to keep the
 *forward* activations bounded (the from-scratch version scales the residual branch to the same end).
 
@@ -201,5 +201,5 @@ and it accepts any input resolution. Every modern CNN (ResNet, Inception, Effici
 - **Transfer learning — reusing these pretrained backbones** → [08.03](../03-transfer-learning/)
 - **Detection/segmentation heads on top of these backbones** → [08.04](../04-detection-and-segmentation/)
 - **Vision transformers — the architecture ConvNeXt was answering** → [08.05](../05-vision-transformers/)
-- **Residual connections and normalization in transformers** → [11.02](../../11-transformers-llms/02-transformer-architecture/)
+- **Residual connections and normalization in transformers** → [11.01](../../11-transformers-and-llms/01-transformer/)
 - **Why residuals work: the gradient-flow analysis** → [07.02](../../07-deep-learning/02-backpropagation/), [07.05](../../07-deep-learning/05-initialization/)

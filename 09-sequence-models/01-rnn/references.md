@@ -72,4 +72,4 @@ exploding analysis (§10.7), and clipping. Free at <https://www.deeplearningbook
 - **LSTM & GRU — the gated fix for vanishing gradients** → [09.02](../02-lstm-gru/)
 - **Seq2seq and attention** → [09.03](../03-seq2seq-and-attention/)
 - **Backpropagation in general** → [07.02](../../07-deep-learning/02-backpropagation/)
-- **Transformers — sequence modeling without recurrence** → [Part 11](../../11-transformers-llms/)
+- **Transformers — sequence modeling without recurrence** → [Part 11](../../11-transformers-and-llms/)

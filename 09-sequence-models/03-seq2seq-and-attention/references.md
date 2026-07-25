@@ -62,8 +62,8 @@ Exact sources used, so every claim in this chapter can be traced and checked.
 
 ## Deferred to later chapters
 
-- **Self-attention and the transformer** → [11.01](../../11-transformers-llms/01-attention/), [11.02](../../11-transformers-llms/02-transformer-architecture/)
+- **Self-attention and the transformer** → [11.01](../../11-transformers-and-llms/01-transformer/), [11.01](../../11-transformers-and-llms/01-transformer/)
 - **The RNN encoders/decoders** → [09.01](../01-rnn/), [09.02](../02-lstm-gru/)
 - **Positional encodings** → [08.05](../../08-computer-vision/05-vision-transformers/)
-- **LLM decoding strategies (top-k, nucleus sampling)** → [11.06](../../11-transformers-llms/06-decoding-generation/)
+- **LLM decoding strategies (top-k, nucleus sampling)** → [11.07](../../11-transformers-and-llms/07-inference/)
 - **Machine translation and NLP tasks** → [Part 10](../../10-nlp/)

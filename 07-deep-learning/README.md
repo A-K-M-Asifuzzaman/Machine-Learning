@@ -106,7 +106,7 @@ flowchart TD
 ## Where this leads
 
 - **Convolutions — weight-sharing for images** → [Part 8](../08-computer-vision/)
-- **Recurrence and attention over sequences** → [Part 9](../09-sequence-models/), [Part 11](../11-transformers-llms/)
+- **Recurrence and attention over sequences** → [Part 9](../09-sequence-models/), [Part 11](../11-transformers-and-llms/)
 - **The bias-variance strategy that deep learning bends (double descent)** → [05.01 §10](../05-model-evaluation/01-bias-variance-and-theory/)
 - **Autodiff at scale — how PyTorch/JAX generalize 07.02** → [07.02 §9](02-backpropagation/)
 - **Training and serving these models in production** → [Part 19](../19-mlops/)

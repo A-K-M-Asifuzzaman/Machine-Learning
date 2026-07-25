@@ -77,6 +77,6 @@ Exact sources used, so every claim in this chapter can be traced and checked.
 
 - **The backbones** → [08.02](../02-cnn-architectures/)
 - **Focal loss** → [07.04](../../07-deep-learning/04-loss-functions/)
-- **The transformer behind DETR** → [11.02](../../11-transformers-llms/02-transformer-architecture/)
+- **The transformer behind DETR** → [11.01](../../11-transformers-and-llms/01-transformer/)
 - **Vision transformers as backbones** → [08.05](../05-vision-transformers/)
 - **Precision/recall/PR curves in general** → [05.03](../../05-model-evaluation/03-classification-metrics/)

@@ -6,7 +6,7 @@
 > and inference. This chapter maps the tasks to their formulations and builds the standard metrics from
 > scratch — because on real NLP the metric is where models are won and lost.
 
-A model architecture ([Part 11](../../11-transformers-llms/)) is reusable across tasks; what changes is
+A model architecture ([Part 11](../../11-transformers-and-llms/)) is reusable across tasks; what changes is
 the **output head** and the **metric**. Understanding the task shapes and their metrics is what lets you
 frame a new problem correctly and evaluate it honestly.
 
@@ -173,8 +173,8 @@ QA, BLEU alone for open generation) is one of the most common and costly mistake
 
 ## Where this leads
 
-- **The transformers that solve these tasks** → [Part 11](../../11-transformers-llms/)
+- **The transformers that solve these tasks** → [Part 11](../../11-transformers-and-llms/)
 - **Classification metrics in general** → [05.03](../../05-model-evaluation/03-classification-metrics/)
 - **Embeddings and features feeding these tasks** → [10.02](../02-classical-representations/), [10.03](../03-word-embeddings/)
-- **Decoding for generation tasks** → [11.06](../../11-transformers-llms/06-decoding-generation/)
-- **Evaluating LLMs (benchmarks, LLM-as-judge)** → [11.08](../../11-transformers-llms/08-evaluation-safety/)
+- **Decoding for generation tasks** → [11.07](../../11-transformers-and-llms/07-inference/)
+- **Evaluating LLMs (benchmarks, LLM-as-judge)** → [11.08](../../11-transformers-and-llms/08-rag-and-agents/)

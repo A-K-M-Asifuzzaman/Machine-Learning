@@ -66,7 +66,7 @@ Exact sources used, so every claim in this chapter can be traced and checked.
 
 ## Deferred to later chapters
 
-- **Contextual embeddings / transformers** → [Part 11](../../11-transformers-llms/)
+- **Contextual embeddings / transformers** → [Part 11](../../11-transformers-and-llms/)
 - **Tokenization feeding embeddings** → [10.01](../01-text-preprocessing/)
 - **Count-based representations** → [10.02](../02-classical-representations/)
 - **Contrastive learning (the SGNS objective's cousin)** → [08.05](../../08-computer-vision/05-vision-transformers/)

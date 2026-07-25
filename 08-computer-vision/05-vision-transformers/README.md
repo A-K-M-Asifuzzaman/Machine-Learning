@@ -11,7 +11,7 @@ The convolution ([08.01](../01-convolution/)) bakes in two assumptions: features
 feature means the same thing anywhere ([08.01 §7](../01-convolution/)). Those priors make CNNs
 data-efficient. The ViT (Dosovitskiy et al., 2020) discards them and lets **self-attention** relate any
 patch to any other from the first layer. The attention mechanism itself is derived in
-[11.01](../../11-transformers-llms/01-attention/); here we focus on what is new for *vision*.
+[11.01](../../11-transformers-and-llms/01-transformer/); here we focus on what is new for *vision*.
 
 ## Table of contents
 
@@ -34,7 +34,7 @@ The full ViT pipeline:
 3. **Add position:** add a positional embedding to each token so order is not lost (§4).
 4. **Prepend a `[CLS]` token:** a learned token whose final state is used for classification.
 5. **Transformer encoder:** $L$ layers of multi-head self-attention + MLP
-   ([11.02](../../11-transformers-llms/02-transformer-architecture/)).
+   ([11.01](../../11-transformers-and-llms/01-transformer/)).
 6. **Head:** classify from the `[CLS]` token (or a global average of tokens).
 
 Everything after step 2 is a standard transformer. The vision-specific parts are steps 1–4.
@@ -129,7 +129,7 @@ excellent at it:
 
 - **MAE (Masked Autoencoders, 2021)** — mask ~75% of patches and train the ViT to reconstruct them.
   A pretext task with no labels that learns strong features; the vision analogue of masked language
-  modeling ([11.05](../../11-transformers-llms/05-pretraining-scaling/)).
+  modeling ([11.02](../../11-transformers-and-llms/02-pretraining/)).
 - **DINO (2021)** — self-distillation with no labels; the resulting attention maps segment objects for
   free, revealing that ViTs learn object structure unsupervised.
 - **CLIP (2021)** — train an image encoder and a text encoder to agree on 400M image–caption pairs.
@@ -166,8 +166,8 @@ same pretrain-then-adapt paradigm, now without labels.
 
 ## Where this leads
 
-- **The attention mechanism in full** → [11.01](../../11-transformers-llms/01-attention/)
-- **The transformer encoder block** → [11.02](../../11-transformers-llms/02-transformer-architecture/)
+- **The attention mechanism in full** → [11.01](../../11-transformers-and-llms/01-transformer/)
+- **The transformer encoder block** → [11.01](../../11-transformers-and-llms/01-transformer/)
 - **CNNs, the prior ViT drops (and ConvNeXt's answer)** → [08.02](../02-cnn-architectures/)
-- **Transfer / self-supervised pretraining** → [08.03](../03-transfer-learning/), [11.05](../../11-transformers-llms/05-pretraining-scaling/)
+- **Transfer / self-supervised pretraining** → [08.03](../03-transfer-learning/), [11.02](../../11-transformers-and-llms/02-pretraining/)
 - **CLIP-conditioned text-to-image generation** → [Part 12](../../12-generative-models/)
