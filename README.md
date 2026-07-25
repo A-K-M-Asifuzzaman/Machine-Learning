@@ -412,10 +412,14 @@ for the live status of every chapter.
   MLPs & universal approximation, backpropagation (verified against PyTorch autograd), activations,
   loss functions, initialization, optimizers (SGD→Adam), normalization (batch/layer), regularization
   (weight decay/dropout/early stopping), and a training-dynamics debugging playbook.
+- ✅ **[Part 8 — Computer Vision](08-computer-vision/)** (5/5): convolution (forward+backward via
+  im2col), CNN architectures (residuals, bottlenecks, depthwise-separable convs, GAP), transfer
+  learning, detection & segmentation (IoU, NMS, anchors, mAP, Dice — verified against torchvision),
+  and vision transformers (patch embedding, attention, Swin, MAE/DINO/CLIP).
 
 Every completed chapter has full theory, a self-verifying `from_scratch.py` (checked against
-scikit-learn / statsmodels / scipy / xgboost / PyTorch to machine precision), exercises, and
-per-chapter citations. Every LaTeX expression is validated by [`tools/check_math.js`](tools/).
+scikit-learn / statsmodels / scipy / xgboost / PyTorch / torchvision to machine precision), exercises,
+and per-chapter citations. Every LaTeX expression is validated by [`tools/check_math.js`](tools/).
 
 ---
 
