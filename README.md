@@ -416,6 +416,9 @@ for the live status of every chapter.
   im2col), CNN architectures (residuals, bottlenecks, depthwise-separable convs, GAP), transfer
   learning, detection & segmentation (IoU, NMS, anchors, mAP, Dice — verified against torchvision),
   and vision transformers (patch embedding, attention, Swin, MAE/DINO/CLIP).
+- ✅ **[Part 9 — Sequence Models](09-sequence-models/)** (3/3): RNNs (BPTT + the vanishing/exploding
+  gradient), LSTM & GRU (gated cell state, the constant error carousel — verified vs `nn.LSTM`/`nn.GRU`),
+  and seq2seq & attention (the fixed-context bottleneck, Bahdanau/Luong scoring, alignment, beam search).
 
 Every completed chapter has full theory, a self-verifying `from_scratch.py` (checked against
 scikit-learn / statsmodels / scipy / xgboost / PyTorch / torchvision to machine precision), exercises,
