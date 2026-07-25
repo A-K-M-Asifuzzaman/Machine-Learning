@@ -419,6 +419,9 @@ for the live status of every chapter.
 - ✅ **[Part 9 — Sequence Models](09-sequence-models/)** (3/3): RNNs (BPTT + the vanishing/exploding
   gradient), LSTM & GRU (gated cell state, the constant error carousel — verified vs `nn.LSTM`/`nn.GRU`),
   and seq2seq & attention (the fixed-context bottleneck, Bahdanau/Luong scoring, alignment, beam search).
+- ✅ **[Part 10 — Natural Language Processing](10-nlp/)** (4/4): tokenization (BPE from scratch vs
+  tiktoken), classical representations (BoW/TF-IDF/LSA/NMF vs sklearn), word embeddings (Word2Vec SGNS,
+  GloVe, FastText — analogies emerge), and NLP tasks & metrics (entity-F1, SQuAD EM/F1, BLEU vs nltk, ROUGE).
 
 Every completed chapter has full theory, a self-verifying `from_scratch.py` (checked against
 scikit-learn / statsmodels / scipy / xgboost / PyTorch / torchvision to machine precision), exercises,
