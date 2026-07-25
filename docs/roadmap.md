@@ -101,7 +101,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 07.06 | Optimizers | 🟢 | 🟢 | ⚪ | 🟢 |
 | 07.07 | Normalization | 🟢 | 🟢 | ⚪ | 🟢 |
 | 07.08 | Regularization | 🟢 | 🟢 | ⚪ | 🟢 |
-| 07.09 | Training dynamics & debugging | ⚪ | ⚪ | ⚪ | ⚪ |
+| 07.09 | Training dynamics & debugging | 🟢 | 🟢 | ⚪ | 🟢 |
 
 ## Parts 8-16 — Domains
 

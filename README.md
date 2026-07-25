@@ -408,10 +408,14 @@ for the live status of every chapter.
 - ✅ **[Part 6 — Ensemble Methods](06-ensembles/)** (6/6): bagging, random forests, boosting &
   AdaBoost, gradient boosting, XGBoost/LightGBM/CatBoost (second-order boosting, verified against the
   real `xgboost` library), and stacking & blending.
+- ✅ **[Part 7 — Deep Learning Foundations](07-deep-learning/)** (9/9): the training loop from scratch —
+  MLPs & universal approximation, backpropagation (verified against PyTorch autograd), activations,
+  loss functions, initialization, optimizers (SGD→Adam), normalization (batch/layer), regularization
+  (weight decay/dropout/early stopping), and a training-dynamics debugging playbook.
 
 Every completed chapter has full theory, a self-verifying `from_scratch.py` (checked against
-scikit-learn / statsmodels / scipy / xgboost to machine precision), exercises, and per-chapter
-citations. Every LaTeX expression is validated by [`tools/check_math.js`](tools/).
+scikit-learn / statsmodels / scipy / xgboost / PyTorch to machine precision), exercises, and
+per-chapter citations. Every LaTeX expression is validated by [`tools/check_math.js`](tools/).
 
 ---
 
