@@ -427,6 +427,10 @@ for the live status of every chapter.
   GQA, RoPE, FlashAttention — all exact), scaling laws & MoE (Chinchilla), adaptation (LoRA/QLoRA,
   quantization), alignment (RLHF & DPO — same optimum), inference (speculative decoding, provably exact),
   and RAG & agents (semantic search, reranking, ANN, ReAct tool use).
+- ✅ **[Part 12 — Generative Models](12-generative-models/)** (5/5): autoencoders (a linear AE recovers
+  PCA), VAEs (ELBO + reparameterization, β-VAE & posterior collapse), GANs (the JS-divergence identity,
+  mode collapse), diffusion (a working DDPM that covers all modes; noise-prediction = score matching),
+  and normalizing flows & autoregressive models (exact likelihood by invertibility or the chain rule).
 
 Every completed chapter has full theory, a self-verifying `from_scratch.py` (checked against
 scikit-learn / statsmodels / scipy / xgboost / PyTorch / torchvision to machine precision), exercises,
