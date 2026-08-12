@@ -422,6 +422,11 @@ for the live status of every chapter.
 - ✅ **[Part 10 — Natural Language Processing](10-nlp/)** (4/4): tokenization (BPE from scratch vs
   tiktoken), classical representations (BoW/TF-IDF/LSA/NMF vs sklearn), word embeddings (Word2Vec SGNS,
   GloVe, FastText — analogies emerge), and NLP tasks & metrics (entity-F1, SQuAD EM/F1, BLEU vs nltk, ROUGE).
+- ✅ **[Part 11 — Transformers & LLMs](11-transformers-and-llms/)** (8/8): the transformer (attention,
+  multi-head, full block verified vs PyTorch), pretraining (BERT/GPT/T5), efficient attention (KV cache,
+  GQA, RoPE, FlashAttention — all exact), scaling laws & MoE (Chinchilla), adaptation (LoRA/QLoRA,
+  quantization), alignment (RLHF & DPO — same optimum), inference (speculative decoding, provably exact),
+  and RAG & agents (semantic search, reranking, ANN, ReAct tool use).
 
 Every completed chapter has full theory, a self-verifying `from_scratch.py` (checked against
 scikit-learn / statsmodels / scipy / xgboost / PyTorch / torchvision to machine precision), exercises,

@@ -110,7 +110,7 @@ This repository is built in public, chapter by chapter. This file is the live st
 | 08 | Computer vision (5 chapters) | 🟢 |
 | 09 | Sequence models (3 chapters) | 🟢 |
 | 10 | NLP (4 chapters) | 🟢 |
-| 11 | Transformers & LLMs (8 chapters) | ⚪ |
+| 11 | Transformers & LLMs (8 chapters) | 🟢 |
 | 12 | Generative models (5 chapters) | ⚪ |
 | 13 | Reinforcement learning (5 chapters) | ⚪ |
 | 14 | Graph ML (2 chapters) | ⚪ |
